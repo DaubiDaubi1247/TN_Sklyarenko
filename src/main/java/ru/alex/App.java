@@ -7,7 +7,7 @@ package ru.alex;
 public class App 
 {
     public static void main( String[] args ) {
-        System.out.println(isPalindrome("1234321"));
+        System.out.println(isPalindrome("12343211"));
     }
 
     private static boolean isPalindrome(String str) {
