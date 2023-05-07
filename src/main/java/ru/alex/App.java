@@ -1,5 +1,7 @@
 package ru.alex;
 
+import java.util.Arrays;
+
 /**
  * Hello world!
  *
@@ -7,13 +9,20 @@ package ru.alex;
 public class App 
 {
     public static void main( String[] args ) {
-        System.out.println(isPalindrome("1234321"));
+        Integer[] a = new Integer[] {1, 2};
+        System.out.println(Arrays.toString(a));
+
+        reverseArray(a);
+        System.out.println(Arrays.toString(a));
     }
 
-    private static boolean isPalindrome(String str) {
+    private static <T> void reverseArray(T[] arr) {
 
-        String reverseString = new StringBuilder(str).reverse().toString();
+        for (int i = 0, j = arr.length - 1; i < arr.length / 2; i++, j--) {
+            T temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
 
-        return str.equals(reverseString);
     }
 }
