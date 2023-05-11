@@ -9,7 +9,7 @@ public class BoardHandler {
 
     public static boolean isValidBoard(char[][] board) {
         for (int i = 0; i < board.length; i++) {
-            if (!isValidRow(board[i]) && !isValidRow(convertColumnToRow(board, i))) {
+            if (!isValidRow(board[i]) || !isValidRow(convertColumnToRow(board, i))) {
                 return false;
             }
         }

@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9ff40af-3184-4a33-814e-59489fee0ebb" name="Changes" comment="create isValidBoard method">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/App.java" afterDir="false" />
-    </list>
+    <list default="true" id="e9ff40af-3184-4a33-814e-59489fee0ebb" name="Changes" comment="create test matrix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683808131536</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="create test matrix">
+      <created>1683809120787</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683809120787</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +112,18 @@
     <MESSAGE value="create BoardHandler and isValidRow method" />
     <MESSAGE value="create convertColumnToRow method" />
     <MESSAGE value="create isValidBoard method" />
-    <option name="LAST_COMMIT_MESSAGE" value="create isValidBoard method" />
+    <MESSAGE value="create test matrix" />
+    <option name="LAST_COMMIT_MESSAGE" value="create test matrix" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/alex/utils/BoardHandler.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
