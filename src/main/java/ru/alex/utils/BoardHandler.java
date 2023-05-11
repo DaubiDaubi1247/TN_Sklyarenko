@@ -29,4 +29,15 @@ public class BoardHandler {
     private static boolean isDotChar(char rowElement) {
         return rowElement == DOT_CHAR;
     }
+
+    private static char[] convertColumnToRow(char[][] charMatrix, int columnIndex) {
+        char[] columnArray = new char[charMatrix.length];
+
+        for (int row = 0; row < charMatrix.length; row++) {
+            columnArray[row] = charMatrix[row][columnIndex];
+        }
+
+        return columnArray;
+    }
 }
+

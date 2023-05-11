@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9ff40af-3184-4a33-814e-59489fee0ebb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e9ff40af-3184-4a33-814e-59489fee0ebb" name="Changes" comment="create BoardHandler and isValidRow method">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/utils/BoardHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/utils/BoardHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +65,14 @@
       <updated>1683218147254</updated>
       <workItem from="1683218148565" duration="320000" />
     </task>
+    <task id="LOCAL-00001" summary="create BoardHandler and isValidRow method">
+      <created>1683807002000</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683807002000</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,5 +88,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="create BoardHandler and isValidRow method" />
+    <option name="LAST_COMMIT_MESSAGE" value="create BoardHandler and isValidRow method" />
   </component>
 </project>
