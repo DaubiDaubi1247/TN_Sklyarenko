@@ -14,7 +14,7 @@ public class BoardHandler {
             }
         }
 
-        return false;
+        return true;
     }
 
     private static boolean isValidRow(char[] matrixRow) {
