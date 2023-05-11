@@ -7,6 +7,16 @@ public class BoardHandler {
 
     private static final char DOT_CHAR = '.';
 
+    public static boolean isValidBoard(char[][] board) {
+        for (int i = 0; i < board.length; i++) {
+            if (!isValidRow(board[i]) && !isValidRow(convertColumnToRow(board, i))) {
+                return false;
+            }
+        }
+
+        return false;
+    }
+
     private static boolean isValidRow(char[] matrixRow) {
 
         Set<Character> characterSet = new HashSet<>();
