@@ -6,14 +6,17 @@ package ru.alex;
  */
 public class App 
 {
+    private final static String TEST_STRING = "12343211";
+
     public static void main( String[] args ) {
-        System.out.println(isPalindrome("12343211"));
+        System.out.println(isPalindrome(TEST_STRING));
     }
 
-    private static boolean isPalindrome(String str) {
+    private static boolean isPalindrome(String string) {
 
-        String reverseString = new StringBuilder(str).reverse().toString();
+        String reverseString = new StringBuilder(string).reverse().toString();
 
-        return str.equals(reverseString);
+        return string.equals(reverseString);
     }
 }
+
