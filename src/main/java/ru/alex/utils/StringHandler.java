@@ -14,16 +14,16 @@ public class StringHandler {
         return mapCharAndCount;
     }
 
-    public static boolean isAnagram(String stringForCompare1, String stringForCompare2) {
+    public static boolean isAnagram(String firstStringForCompare, String secondStringForCompare) {
 
-        if (stringForCompare1.length() != stringForCompare2.length()) {
+        if (firstStringForCompare.length() != secondStringForCompare.length()) {
             return false;
         }
 
-        Map<Character, Integer> mapCharAndCountsFirstStr = getMapCharAndCountFromString(stringForCompare1);
+        Map<Character, Integer> mapCharAndCountsFirstStr = getMapCharAndCountFromString(firstStringForCompare);
 
-        return !stringForCompare1.equals(stringForCompare2)
-                && mapCharAndCountsFirstStr.equals(getMapCharAndCountFromString(stringForCompare2));
+        return !firstStringForCompare.equals(secondStringForCompare)
+                && mapCharAndCountsFirstStr.equals(getMapCharAndCountFromString(secondStringForCompare));
     }
 
 }
