@@ -22,20 +22,19 @@ public class BoardHandler {
         Set<Character> characterSet = new HashSet<>();
 
         for (char rowElement : matrixRow) {
-            if (!isValidElement(rowElement)) {
+
+            boolean isDigit = Character.isDigit(rowElement);
+
+            if (!isDigit && !isDotChar(rowElement)) {
                 return false;
             }
-            if (Character.isDigit(rowElement) && characterSet.contains(rowElement)) {
+            if (isDigit && characterSet.contains(rowElement)) {
                 return false;
             }
             characterSet.add(rowElement);
         }
 
         return true;
-    }
-
-    private static boolean isValidElement(char rowElement) {
-        return isDotChar(rowElement) || Character.isDigit(rowElement);
     }
 
     private static boolean isDotChar(char rowElement) {

@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9ff40af-3184-4a33-814e-59489fee0ebb" name="Changes" comment="debug BoardHandler">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/utils/BoardHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/utils/BoardHandler.java" afterDir="false" />
-    </list>
+    <list default="true" id="e9ff40af-3184-4a33-814e-59489fee0ebb" name="Changes" comment="refactor isValidRow" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683809465526</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactor isValidRow">
+      <created>1683809987170</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683809987170</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,7 +128,8 @@
     <MESSAGE value="create isValidBoard method" />
     <MESSAGE value="create test matrix" />
     <MESSAGE value="debug BoardHandler" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug BoardHandler" />
+    <MESSAGE value="refactor isValidRow" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor isValidRow" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
