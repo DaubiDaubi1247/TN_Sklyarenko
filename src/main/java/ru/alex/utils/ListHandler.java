@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.function.Predicate;
 
 public class ListHandler {
-    public static int getNumSumBySelectionCondition(List<Integer> numList, Predicate<Integer> selectionCondition) {
+    public static int getSumBySelectionCondition(List<Integer> numList, Predicate<Integer> selectionCondition) {
 
         return numList.stream()
                 .filter(selectionCondition)
