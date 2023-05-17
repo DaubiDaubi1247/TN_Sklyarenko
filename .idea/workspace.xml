@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e9ff40af-3184-4a33-814e-59489fee0ebb" name="Changes" comment="create getElementCountsMap method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/utils/ListHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/utils/ListHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/alex/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/alex/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +59,46 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager" selected="JUnit.AppTest.getRepeatedElementList_WithoutDuplicates_ReturnExpectedResult">
+    <configuration name="AppTest.getRepeatedElementList_CorrectItems_ReturnExpectedResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.alex.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.alex" />
+      <option name="MAIN_CLASS_NAME" value="ru.alex.AppTest" />
+      <option name="METHOD_NAME" value="getRepeatedElementList_CorrectItems_ReturnExpectedResult" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.getRepeatedElementList_WithoutDuplicates_ReturnExpectedResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.alex.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.alex" />
+      <option name="MAIN_CLASS_NAME" value="ru.alex.AppTest" />
+      <option name="METHOD_NAME" value="getRepeatedElementList_WithoutDuplicates_ReturnExpectedResult" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AppTest.getRepeatedElementList_WithoutDuplicates_ReturnExpectedResult" />
+        <item itemvalue="JUnit.AppTest.getRepeatedElementList_CorrectItems_ReturnExpectedResult" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
