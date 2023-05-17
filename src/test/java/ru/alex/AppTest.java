@@ -1,38 +1,26 @@
 package ru.alex;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Assert;
+import org.junit.Test;
+import ru.alex.utils.StringHandler;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
+public class AppTest {
+
+    private final static String TEST_STRING = "1231";
+    private final static String TEST_STRING_2 = "3211";
+
+    private final static String TEST_STRING_3 = "1232";
+
+    @Test
+    public void isAnagram_CorrectStrings_ReturnTrue() {
+        Assert.assertTrue(StringHandler.isAnagram(TEST_STRING, TEST_STRING_2));
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+    @Test
+    public void isAnagram_InCorrectStrings_ReturnFalse() {
+        Assert.assertFalse(StringHandler.isAnagram(TEST_STRING, TEST_STRING_3));
     }
 }

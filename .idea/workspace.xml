@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e9ff40af-3184-4a33-814e-59489fee0ebb" name="Changes" comment="add space after consts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/alex/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/alex/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +57,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.AppTest">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.alex.App" />
       <module name="tn" />
@@ -69,8 +71,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.alex.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.alex" />
+      <option name="MAIN_CLASS_NAME" value="ru.alex.AppTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.isAnagram_CorrectString_ReturnTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.alex.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.alex" />
+      <option name="MAIN_CLASS_NAME" value="ru.alex.AppTest" />
+      <option name="METHOD_NAME" value="isAnagram_CorrectString_ReturnTrue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="JUnit.AppTest.isAnagram_CorrectString_ReturnTrue" />
         <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
