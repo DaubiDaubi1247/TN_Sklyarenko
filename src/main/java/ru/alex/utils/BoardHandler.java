@@ -9,46 +9,29 @@ public class BoardHandler {
 
     public static boolean isValidBoard(char[][] board) {
         for (int i = 0; i < board.length; i++) {
-            if (!isValidRow(board[i]) || !isValidRow(convertColumnToRow(board, i))) {
-                return false;
+            Set<Character> rowSet = new HashSet<>();
+            Set<Character> colSet = new HashSet<>();
+
+            for (int j = 0; j < board[i].length; j++) {
+                char rowElement = board[i][j];
+                char colElement = board[j][i];
+
+                if (!isValidElement(rowElement, rowSet) || !isValidElement(colElement, colSet)) {
+                    return false;
+                }
             }
         }
 
         return true;
     }
 
-    private static boolean isValidRow(char[] matrixRow) {
-
-        Set<Character> characterSet = new HashSet<>();
-
-        for (char rowElement : matrixRow) {
-
-            boolean isDigit = Character.isDigit(rowElement);
-
-            if (!isDigit && !isDotChar(rowElement)) {
-                return false;
-            }
-            if (isDigit && characterSet.contains(rowElement)) {
-                return false;
-            }
-            characterSet.add(rowElement);
-        }
-
-        return true;
+    private static boolean isValidElement(char element, Set<Character> set) {
+        return isDotChar(element) || (Character.isDigit(element) && set.add(element));
     }
 
     private static boolean isDotChar(char rowElement) {
         return rowElement == DOT_CHAR;
     }
 
-    private static char[] convertColumnToRow(char[][] charMatrix, int columnIndex) {
-        char[] columnArray = new char[charMatrix.length];
-
-        for (int row = 0; row < charMatrix.length; row++) {
-            columnArray[row] = charMatrix[row][columnIndex];
-        }
-
-        return columnArray;
-    }
 }
 
