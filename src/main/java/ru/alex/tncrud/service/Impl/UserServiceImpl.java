@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 import ru.alex.tncrud.dto.UserDto;
+import ru.alex.tncrud.repository.UserRepository;
 import ru.alex.tncrud.service.UserService;
 
 import javax.validation.Valid;
@@ -12,6 +13,8 @@ import javax.validation.Valid;
 @RequiredArgsConstructor
 @Validated
 public class UserServiceImpl implements UserService {
+
+    private final UserRepository userRepository;
 
     @Override
     public UserDto createUser(@Valid UserDto userDto) {
