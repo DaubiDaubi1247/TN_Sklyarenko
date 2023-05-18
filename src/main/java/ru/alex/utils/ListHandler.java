@@ -8,15 +8,15 @@ import java.util.Map;
 public class ListHandler {
     public static <T> List<T> getRepeatedElementList(List<T> elements) {
         Map<T, Integer> elementCountsMap = getElementCountsMap(elements);
-        List<T> uniqueElements = new ArrayList<>();
+        List<T> repeatedElements = new ArrayList<>();
 
         for (Map.Entry<T, Integer> elementAndCount : elementCountsMap.entrySet()) {
             if (elementAndCount.getValue() > 1) {
-                uniqueElements.add(elementAndCount.getKey());
+                repeatedElements.add(elementAndCount.getKey());
             }
         }
 
-        return uniqueElements;
+        return repeatedElements;
     }
 
     private static <T> Map<T, Integer> getElementCountsMap(List<T> elements) {
