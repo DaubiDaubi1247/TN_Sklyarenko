@@ -1,29 +1,27 @@
 package ru.alex.utils;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Arrays;
 
 public class StringHandler {
-    private static Map<Character, Integer> getMapCharAndCountFromString (String str) {
-        Map<Character, Integer> mapCharAndCount = new HashMap<>();
+    private static char[] getSortedCharArrayFromString(String str) {
 
-        for (Character character : str.toCharArray()) {
-            mapCharAndCount.merge(character, 1, Integer::sum);
-        }
+        char[] charArrayFromStr = str.toCharArray();
+        Arrays.sort(charArrayFromStr);
 
-        return mapCharAndCount;
+        return charArrayFromStr;
     }
 
     public static boolean isAnagram(String firstStringForCompare, String secondStringForCompare) {
 
-        if (firstStringForCompare.length() != secondStringForCompare.length()) {
+        if (firstStringForCompare.length() != secondStringForCompare.length()
+                || firstStringForCompare.equals(secondStringForCompare)) {
+
             return false;
         }
 
-        Map<Character, Integer> mapCharAndCountsFirstStr = getMapCharAndCountFromString(firstStringForCompare);
+        char[] sortedCharArrayFromString = getSortedCharArrayFromString(firstStringForCompare);
 
-        return !firstStringForCompare.equals(secondStringForCompare)
-                && mapCharAndCountsFirstStr.equals(getMapCharAndCountFromString(secondStringForCompare));
+        return Arrays.equals(sortedCharArrayFromString, getSortedCharArrayFromString(secondStringForCompare));
     }
 
 }
