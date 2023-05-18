@@ -8,6 +8,7 @@ import javax.validation.constraints.NotBlank;
 @Builder
 public record UserDto (
         Integer id,
+
         @NotBlank
         String firstName,
 
