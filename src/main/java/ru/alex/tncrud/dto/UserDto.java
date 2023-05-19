@@ -1,23 +1,27 @@
 package ru.alex.tncrud.dto;
 
-import lombok.Builder;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
-@Builder
-public record UserDto (
-        Integer id,
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@SuperBuilder
+public class UserDto {
+        private Integer id;
 
         @NotBlank
-        String firstName,
+        private String firstName;
 
         @NotBlank
-        String lastName,
+        private String lastName;
 
         @Email
-        String email,
+        private String email;
 
-        @NotBlank
-        String password
-){}
+}
