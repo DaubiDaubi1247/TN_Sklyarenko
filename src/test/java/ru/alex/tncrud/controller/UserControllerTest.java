@@ -16,7 +16,6 @@ import ru.alex.tncrud.path.UserPathTest;
 import ru.alex.tncrud.service.UserService;
 
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -70,7 +69,7 @@ class UserControllerTest {
     void getUserById_ShouldReturnUserById() throws Exception {
         UserDto userTestDataAfterSave = userTestDataAfterSave();
 
-        when(userService.getUserById(1)).thenReturn(userTestDataAfterSave());
+        when(userService.getUserById(any(Integer.class))).thenReturn(userTestDataAfterSave());
 
         mockMvc.perform(get(UserPathTest.USER_PATH_WITH_ID.getPath()))
                 .andExpect(status().isOk())
@@ -85,7 +84,7 @@ class UserControllerTest {
     void updateUserInfo_ShouldReturnUpdatedUser() throws Exception {
         UserDto userTestDataAfterSave = userTestDataAfterSave();
 
-        when(userService.updateUserInfo(eq(1), any(UserWithPasswordDto.class))).thenReturn(userTestDataAfterSave());
+        when(userService.updateUserInfo(any(Integer.class), any(UserWithPasswordDto.class))).thenReturn(userTestDataAfterSave());
 
         mockMvc.perform(put(UserPathTest.USER_PATH_WITH_ID.getPath())
                     .contentType(MediaType.APPLICATION_JSON)

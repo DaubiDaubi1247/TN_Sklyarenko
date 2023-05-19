@@ -57,18 +57,37 @@ class UserServiceImplTest {
 
         when(userRepository.findById(any(Integer.class))).thenReturn(Optional.of(savedUserEntity));
 
-        UserDto userById = userService.getUserById(1);
+        UserDto userById = userService.getUserById(USER_ID_FOR_TEST);
 
-        assertEquals(userById.getId(),1);
+        assertEquals(userById.getId(),USER_ID_FOR_TEST);
         verify(userRepository, times(1)).findById(any(Integer.class));
     }
 
     @Test
-    void updateUserInfo() {
+    @DisplayName("update user info by id")
+    void updateUserInfo_ShouldReturnUpdatedUser() {
+        User savedUserEntity = userEntityTestData();
+
+        when(userRepository.findById(any(Integer.class))).thenReturn(Optional.of(savedUserEntity));
+        when(userRepository.save(any(User.class))).thenReturn(userForUpdateTestData());
+
+        UserDto updatedUserInfo = userService.updateUserInfo(USER_ID_FOR_TEST, userWithPasswordTestData());
+
+        assertEquals(updatedUserInfo.getFirstName(), NAME_AFTER_UPDATE);
+        verify(userRepository, times(1)).findById(any(Integer.class));
+        verify(userRepository, times(1)).save(any(User.class));
     }
 
     @Test
-    void deleteUser() {
+    @DisplayName("delete user by id")
+    void deleteUser_ShouldReturnTimesDeleteAndFindById() {
+
+        when(userRepository.findById(any(Integer.class))).thenReturn(Optional.of(new User()));
+
+        userService.deleteUser(USER_ID_FOR_TEST);
+
+        verify(userRepository, times(1)).findById(any(Integer.class));
+        verify(userRepository, times(1)).delete(any(User.class));
     }
 
 }
