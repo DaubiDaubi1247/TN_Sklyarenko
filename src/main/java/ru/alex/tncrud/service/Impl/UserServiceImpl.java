@@ -1,5 +1,6 @@
 package ru.alex.tncrud.service.Impl;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -14,7 +15,6 @@ import ru.alex.tncrud.repository.UserRepository;
 import ru.alex.tncrud.service.UserService;
 import ru.alex.tncrud.utils.ExceptionTextFabric;
 
-import javax.validation.Valid;
 
 @Service
 @RequiredArgsConstructor

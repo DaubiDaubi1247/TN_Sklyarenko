@@ -1,9 +1,8 @@
 package ru.alex.tncrud.service;
 
+import jakarta.validation.Valid;
 import ru.alex.tncrud.dto.UserDto;
 import ru.alex.tncrud.dto.UserWithPasswordDto;
-
-import javax.validation.Valid;
 
 public interface UserService {
 

@@ -1,5 +1,6 @@
 package ru.alex.tncrud.exceptionHandler;
 
+import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -7,7 +8,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import ru.alex.tncrud.excetpion.AlreadyExistException;
 import ru.alex.tncrud.excetpion.NotFoundException;
 
-import javax.validation.ConstraintViolationException;
 
 @RestControllerAdvice
 public class ControllerExceptionHandler {
