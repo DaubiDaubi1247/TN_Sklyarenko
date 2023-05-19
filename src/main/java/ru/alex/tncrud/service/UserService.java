@@ -8,4 +8,6 @@ import javax.validation.Valid;
 public interface UserService {
 
     UserDto createUser(@Valid UserWithPasswordDto userDto);
+
+    UserDto getUserById(Integer id);
 }

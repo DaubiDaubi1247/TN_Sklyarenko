@@ -15,13 +15,13 @@ import javax.validation.constraints.NotBlank;
 public class UserDto {
         private Integer id;
 
-        @NotBlank
+        @NotBlank(message = "firstName must be not null and not empty")
         private String firstName;
 
-        @NotBlank
+        @NotBlank(message = "lastName must be not null and not empty")
         private String lastName;
 
-        @Email
+        @Email(message = "email must be match pattern")
         private String email;
 
 }

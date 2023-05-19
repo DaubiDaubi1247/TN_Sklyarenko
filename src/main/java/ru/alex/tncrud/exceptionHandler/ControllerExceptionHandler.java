@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import ru.alex.tncrud.excetpion.AlreadyExistException;
+import ru.alex.tncrud.excetpion.NotFoundException;
 
 import javax.validation.ConstraintViolationException;
 
@@ -20,7 +21,7 @@ public class ControllerExceptionHandler {
         return getErrorMessageWithStatus(HttpStatus.CONFLICT, exception.getMessage());
     }
 
-    @ExceptionHandler({ConstraintViolationException.class})
+    @ExceptionHandler({ConstraintViolationException.class, NotFoundException.class})
     public ResponseEntity<ErrorMessage> badRequestHandler(RuntimeException exception) {
         return getErrorMessageWithStatus(HttpStatus.BAD_REQUEST, exception.getMessage());
     }

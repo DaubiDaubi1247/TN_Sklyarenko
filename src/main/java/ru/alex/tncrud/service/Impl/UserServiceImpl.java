@@ -8,6 +8,7 @@ import ru.alex.tncrud.dto.UserDto;
 import ru.alex.tncrud.dto.UserWithPasswordDto;
 import ru.alex.tncrud.entity.User;
 import ru.alex.tncrud.excetpion.AlreadyExistException;
+import ru.alex.tncrud.excetpion.NotFoundException;
 import ru.alex.tncrud.mapper.UserMapper;
 import ru.alex.tncrud.repository.UserRepository;
 import ru.alex.tncrud.service.UserService;
@@ -35,5 +36,15 @@ public class UserServiceImpl implements UserService {
         newUser.setPassword(passwordEncoder.encode(userDto.getPassword()));
 
         return userMapper.toDto(userRepository.save(newUser));
+    }
+
+    @Override
+    public UserDto getUserById(Integer id) {
+        return userMapper.toDto(getUserEntityById(id));
+    }
+
+    private User getUserEntityById(Integer id) {
+        return userRepository.findById(id)
+                .orElseThrow(() -> new NotFoundException(ExceptionTextFabric.entityNotFoundById(id)));
     }
 }

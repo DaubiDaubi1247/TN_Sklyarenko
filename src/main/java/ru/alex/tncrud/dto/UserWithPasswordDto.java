@@ -12,6 +12,6 @@ import javax.validation.constraints.NotBlank;
 @Getter
 @SuperBuilder
 public class UserWithPasswordDto extends UserDto {
-    @NotBlank
+    @NotBlank(message = "password must be not null and not empty")
     private String password;
 }
