@@ -1,10 +1,11 @@
 package ru.alex.tncrud.service;
 
 import ru.alex.tncrud.dto.UserDto;
+import ru.alex.tncrud.dto.UserWithPasswordDto;
 
 import javax.validation.Valid;
 
 public interface UserService {
 
-    UserDto createUser(@Valid UserDto userDto);
+    UserDto createUser(@Valid UserWithPasswordDto userDto);
 }
