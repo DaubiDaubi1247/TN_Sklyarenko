@@ -11,6 +11,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import ru.alex.tncrud.dto.UserDto;
 import ru.alex.tncrud.dto.UserWithPasswordDto;
+import ru.alex.tncrud.excetpion.AlreadyExistException;
 import ru.alex.tncrud.path.UserPathTest;
 import ru.alex.tncrud.service.UserService;
 
@@ -53,6 +54,18 @@ class UserControllerTest {
     }
 
     @Test
+    @DisplayName("POST /user user email already exist")
+    void createUser_ShouldThrowAlreadyExist() throws Exception {
+
+        when(userService.createUser(any(UserWithPasswordDto.class))).thenThrow(AlreadyExistException.class);
+
+        mockMvc.perform(post(UserPathTest.BASE_USER_PATH.getPath())
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(userTestData())))
+                .andExpect(status().isConflict());
+    }
+
+    @Test
     @DisplayName("GET /user/{userId}")
     void getUserById_ShouldReturnUserById() throws Exception {
         UserDto userTestDataAfterSave = userTestDataAfterSave();
@@ -85,7 +98,8 @@ class UserControllerTest {
     }
 
     @Test
-    void deleteUser() throws Exception {
+    @DisplayName("DELETE /user/{userId}")
+    void deleteUser_Should() throws Exception {
 
         mockMvc.perform(delete(UserPathTest.USER_PATH_WITH_ID.getPath()))
                 .andExpect(status().isOk());
