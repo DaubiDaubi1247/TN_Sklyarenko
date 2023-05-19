@@ -57,7 +57,7 @@
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
-            <version>1.5.3.Final</version>
+            <version>1.5.4.Final</version>
         </dependency>
     </dependencies>
 
@@ -76,11 +76,12 @@
                         <exclude>
                             <groupId>org.mapstruct</groupId>
                             <artifactId>mapstruct-processor</artifactId>
-                            <version>1.5.3.Final</version>
+                            <version>1.5.4.Final</version>
                         </exclude>
                     </excludes>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 
