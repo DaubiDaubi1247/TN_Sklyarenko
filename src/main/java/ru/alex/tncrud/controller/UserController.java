@@ -1,6 +1,6 @@
 package ru.alex.tncrud.controller;
 
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Min;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,7 +23,7 @@ public class UserController {
     }
 
     @GetMapping("/{userId}")
-    public ResponseEntity<UserDto> getUserById(@PathVariable @NotNull Integer userId) {
+    public ResponseEntity<UserDto> getUserById(@PathVariable @Min(1) Integer userId) {
         return ResponseEntity.ok(userService.getUserById(userId));
     }
 

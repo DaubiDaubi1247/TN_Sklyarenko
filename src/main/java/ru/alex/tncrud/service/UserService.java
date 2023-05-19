@@ -9,4 +9,6 @@ public interface UserService {
     UserDto createUser(@Valid UserWithPasswordDto userDto);
 
     UserDto getUserById(Integer id);
+
+    UserDto updateUserInfo(Integer id, @Valid UserWithPasswordDto newUserInfo);
 }

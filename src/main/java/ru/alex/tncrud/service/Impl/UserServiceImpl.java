@@ -4,6 +4,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 import ru.alex.tncrud.dto.UserDto;
 import ru.alex.tncrud.dto.UserWithPasswordDto;
@@ -41,6 +42,19 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDto getUserById(Integer id) {
         return userMapper.toDto(getUserEntityById(id));
+    }
+
+    @Override
+    @Transactional
+    public UserDto updateUserInfo(Integer id, @Valid UserWithPasswordDto newUserInfo) {
+        User oldUserInfo = getUserEntityById(id);
+
+        oldUserInfo.setPassword(passwordEncoder.encode(newUserInfo.getPassword()));
+        oldUserInfo.setEmail(newUserInfo.getEmail());
+        oldUserInfo.setFirstName(newUserInfo.getFirstName());
+        oldUserInfo.setLastName(newUserInfo.getLastName());
+
+        return userMapper.toDto(userRepository.save(oldUserInfo));
     }
 
     private User getUserEntityById(Integer id) {
