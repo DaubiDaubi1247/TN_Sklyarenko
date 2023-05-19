@@ -1,6 +1,7 @@
 package ru.alex.tncrud.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -14,12 +15,12 @@ import ru.alex.tncrud.path.UserPathTest;
 import ru.alex.tncrud.service.UserService;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static ru.alex.tncrud.dataForTest.UserTestData.userTestData;
-import static ru.alex.tncrud.dataForTest.UserTestData.userTestDataAfterSave;
+import static ru.alex.tncrud.dataForTest.UserTestData.*;
 
 @WebMvcTest(UserController.class)
 @AutoConfigureMockMvc(addFilters = false)
@@ -34,7 +35,8 @@ class UserControllerTest {
     private UserService userService;
 
     @Test
-    void createUser() throws Exception {
+    @DisplayName("POST /user")
+    void createUser_ShouldReturnUserAfterSave() throws Exception {
 
         UserDto userTestDataAfterSave = userTestDataAfterSave();
 
@@ -51,14 +53,42 @@ class UserControllerTest {
     }
 
     @Test
-    void getUserById() {
+    @DisplayName("GET /user/{userId}")
+    void getUserById_ShouldReturnUserById() throws Exception {
+        UserDto userTestDataAfterSave = userTestDataAfterSave();
+
+        when(userService.getUserById(1)).thenReturn(userTestDataAfterSave());
+
+        mockMvc.perform(get(UserPathTest.USER_PATH_WITH_ID.getPath()))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id").value(userTestDataAfterSave.getId()))
+                .andExpect(jsonPath("$.firstName").value(userTestDataAfterSave.getFirstName()))
+                .andExpect(jsonPath("$.lastName").value(userTestDataAfterSave.getLastName()))
+                .andExpect(jsonPath("$.email").value(userTestDataAfterSave.getEmail()));
     }
 
     @Test
-    void updateUserInfo() {
+    @DisplayName("PUT /user/{userId}")
+    void updateUserInfo_ShouldReturnUpdatedUser() throws Exception {
+        UserDto userTestDataAfterSave = userTestDataAfterSave();
+
+        when(userService.updateUserInfo(eq(1), any(UserWithPasswordDto.class))).thenReturn(userTestDataAfterSave());
+
+        mockMvc.perform(put(UserPathTest.USER_PATH_WITH_ID.getPath())
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .content(objectMapper.writeValueAsString(userWithPasswordTestData())))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id").value(userTestDataAfterSave.getId()))
+                .andExpect(jsonPath("$.firstName").value(userTestDataAfterSave.getFirstName()))
+                .andExpect(jsonPath("$.lastName").value(userTestDataAfterSave.getLastName()))
+                .andExpect(jsonPath("$.email").value(userTestDataAfterSave.getEmail()));
     }
 
     @Test
-    void deleteUser() {
+    void deleteUser() throws Exception {
+
+        mockMvc.perform(delete(UserPathTest.USER_PATH_WITH_ID.getPath()))
+                .andExpect(status().isOk());
+
     }
 }
