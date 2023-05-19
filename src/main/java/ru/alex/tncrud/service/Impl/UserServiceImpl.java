@@ -57,6 +57,14 @@ public class UserServiceImpl implements UserService {
         return userMapper.toDto(userRepository.save(oldUserInfo));
     }
 
+    @Override
+    @Transactional
+    public void deleteUser(Integer id) {
+        User deletedUser = getUserEntityById(id);
+
+        userRepository.delete(deletedUser);
+    }
+
     private User getUserEntityById(Integer id) {
         return userRepository.findById(id)
                 .orElseThrow(() -> new NotFoundException(ExceptionTextFabric.entityNotFoundById(id)));

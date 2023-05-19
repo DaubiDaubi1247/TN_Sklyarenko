@@ -11,4 +11,6 @@ public interface UserService {
     UserDto getUserById(Integer id);
 
     UserDto updateUserInfo(Integer id, @Valid UserWithPasswordDto newUserInfo);
+
+    void deleteUser(Integer id);
 }

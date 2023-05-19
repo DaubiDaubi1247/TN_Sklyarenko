@@ -27,4 +27,20 @@ public class UserController {
         return ResponseEntity.ok(userService.getUserById(userId));
     }
 
+    @PutMapping("/{userId}")
+    public ResponseEntity<UserDto> updateUserInfo(@PathVariable @Min(1) Integer userId,
+                                                  @RequestBody UserWithPasswordDto user) {
+
+        return ResponseEntity.ok(userService.updateUserInfo(userId, user));
+    }
+
+    @DeleteMapping("/{userId}")
+    public ResponseEntity<Void> deleteUser(@PathVariable @Min(1) Integer userId) {
+
+        userService.deleteUser(userId);
+
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+
 }
