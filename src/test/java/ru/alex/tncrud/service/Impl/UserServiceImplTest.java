@@ -24,6 +24,8 @@ import static ru.alex.tncrud.dataForTest.UserTestData.*;
 @ExtendWith(MockitoExtension.class)
 class UserServiceImplTest {
 
+    private final int WANTED_NUMBER_OF_INVOCATIONS = 1;
+
     @Mock
     UserRepository userRepository;
 
@@ -47,7 +49,7 @@ class UserServiceImplTest {
         UserDto savedUser = userService.createUser(userWithPasswordTestData());
 
         assertEquals(savedUser, userTestDataAfterSave());
-        verify(userRepository, times(1)).save(any(User.class));
+        verify(userRepository, times(WANTED_NUMBER_OF_INVOCATIONS)).save(any(User.class));
     }
 
     @Test
@@ -60,7 +62,7 @@ class UserServiceImplTest {
         UserDto userById = userService.getUserById(USER_ID_FOR_TEST);
 
         assertEquals(userById.getId(),USER_ID_FOR_TEST);
-        verify(userRepository, times(1)).findById(any(Integer.class));
+        verify(userRepository, times(WANTED_NUMBER_OF_INVOCATIONS)).findById(any(Integer.class));
     }
 
     @Test
@@ -74,8 +76,8 @@ class UserServiceImplTest {
         UserDto updatedUserInfo = userService.updateUserInfo(USER_ID_FOR_TEST, userWithPasswordTestData());
 
         assertEquals(updatedUserInfo.getFirstName(), NAME_AFTER_UPDATE);
-        verify(userRepository, times(1)).findById(any(Integer.class));
-        verify(userRepository, times(1)).save(any(User.class));
+        verify(userRepository, times(WANTED_NUMBER_OF_INVOCATIONS)).findById(any(Integer.class));
+        verify(userRepository, times(WANTED_NUMBER_OF_INVOCATIONS)).save(any(User.class));
     }
 
     @Test
@@ -86,8 +88,8 @@ class UserServiceImplTest {
 
         userService.deleteUser(USER_ID_FOR_TEST);
 
-        verify(userRepository, times(1)).findById(any(Integer.class));
-        verify(userRepository, times(1)).delete(any(User.class));
+        verify(userRepository, times(WANTED_NUMBER_OF_INVOCATIONS)).findById(any(Integer.class));
+        verify(userRepository, times(WANTED_NUMBER_OF_INVOCATIONS)).delete(any(User.class));
     }
 
 }
