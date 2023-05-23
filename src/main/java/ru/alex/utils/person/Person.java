@@ -2,10 +2,14 @@ package ru.alex.utils.person;
 
 public class Person {
 
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     private int age;
     private String address;
 
-    Person(int age) {
+    public Person(int age) {
         if (age > 15) {
             throw new IllegalArgumentException("Age can`t be more than 15");
         }
