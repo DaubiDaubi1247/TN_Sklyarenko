@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9ff40af-3184-4a33-814e-59489fee0ebb" name="Changes" comment="create tests for getAddressListWhereAgeGreaterThan">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/alex/utils/ListHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/alex/BinarySearchTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/alex/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/utils/person/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/utils/person/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/utils/person/PersonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/utils/person/PersonHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/alex/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/alex/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/utils/person/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/utils/person/PersonCreator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/utils/person/PersonHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/alex/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="medium-4" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,21 +63,21 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.AppTest.getAddressListWhereAgeGreaterThan_AllAddressIsNull_ExpectedResult">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.alex.App" />
+  <component name="RunManager" selected="JUnit.java in tn">
+    <configuration name="BinarySearchTest,testBinarySearch_FoundElement and 3 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tn" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.alex.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="ru.alex.BinarySearchTest,testBinarySearch_FoundElement" />
+        <pattern testClass="ru.alex.BinarySearchTest,testBinarySearch_NotFoundElement" />
+        <pattern testClass="ru.alex.BinarySearchTest,testBinarySearch_FirstElement" />
+        <pattern testClass="ru.alex.BinarySearchTest,testBinarySearch_LastElement" />
+      </patterns>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BinarySearchTest.testBinarySearch_FoundElement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tn" />
       <extension name="coverage">
         <pattern>
@@ -83,29 +86,26 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.alex" />
-      <option name="MAIN_CLASS_NAME" value="ru.alex.AppTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppTest.getAddressListWhereAgeGreaterThan_AllAddressIsNull_ExpectedResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tn" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.alex.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.alex" />
-      <option name="MAIN_CLASS_NAME" value="ru.alex.AppTest" />
-      <option name="METHOD_NAME" value="getAddressListWhereAgeGreaterThan_AllAddressIsNull_ExpectedResult" />
+      <option name="MAIN_CLASS_NAME" value="ru.alex.BinarySearchTest" />
+      <option name="METHOD_NAME" value="testBinarySearch_FoundElement" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.getAddressListWhereAgeGreaterThan_CorrectAddress_ExpectedResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BinarySearchTest,testBinarySearch_NotFoundElement and 2 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tn" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="ru.alex.BinarySearchTest,testBinarySearch_NotFoundElement" />
+        <pattern testClass="ru.alex.BinarySearchTest,testBinarySearch_FirstElement" />
+        <pattern testClass="ru.alex.BinarySearchTest,testBinarySearch_LastElement" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinarySearchTest.testBinarySearch_NotStandardClass_LastElement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tn" />
       <extension name="coverage">
         <pattern>
@@ -114,19 +114,28 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.alex" />
-      <option name="MAIN_CLASS_NAME" value="ru.alex.AppTest" />
-      <option name="METHOD_NAME" value="getAddressListWhereAgeGreaterThan_CorrectAddress_ExpectedResult" />
+      <option name="MAIN_CLASS_NAME" value="ru.alex.BinarySearchTest" />
+      <option name="METHOD_NAME" value="testBinarySearch_NotStandardClass_LastElement" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in tn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tn" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AppTest.getAddressListWhereAgeGreaterThan_AllAddressIsNull_ExpectedResult" />
-        <item itemvalue="JUnit.AppTest.getAddressListWhereAgeGreaterThan_CorrectAddress_ExpectedResult" />
-        <item itemvalue="JUnit.AppTest" />
-        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.java in tn" />
+        <item itemvalue="JUnit.BinarySearchTest,testBinarySearch_NotFoundElement and 2 more" />
+        <item itemvalue="JUnit.BinarySearchTest.testBinarySearch_FoundElement" />
+        <item itemvalue="JUnit.BinarySearchTest.testBinarySearch_NotStandardClass_LastElement" />
+        <item itemvalue="JUnit.BinarySearchTest,testBinarySearch_FoundElement and 3 more" />
       </list>
     </recent_temporary>
   </component>
@@ -139,6 +148,7 @@
       <option name="presentableId" value="Default" />
       <updated>1683218147254</updated>
       <workItem from="1683218148565" duration="320000" />
+      <workItem from="1684909771775" duration="3179000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1684141293202</created>
@@ -161,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684823270172</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="create tests for getAddressListWhereAgeGreaterThan">
+      <created>1684824889463</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684824889463</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
