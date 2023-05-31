@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9ff40af-3184-4a33-814e-59489fee0ebb" name="Changes" comment="add tests">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/utils/TreeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/utils/TreeHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/utils/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/utils/TreeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/alex/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/alex/TreeTraversalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/alex/TreeTraversalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/alex/TreeTraversalTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="medium-4" />
+        <entry key="$PROJECT_DIR$" value="medium-5" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -106,7 +103,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeTraversalTest.getAddressListWhereAgeGreaterThan_AllAddressIsNull_ExpectedResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TreeTraversalTest.preorderTraversal_CorrectTree_CorrectResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tn" />
       <extension name="coverage">
         <pattern>
@@ -116,7 +113,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.alex" />
       <option name="MAIN_CLASS_NAME" value="ru.alex.TreeTraversalTest" />
-      <option name="METHOD_NAME" value="getAddressListWhereAgeGreaterThan_AllAddressIsNull_ExpectedResult" />
+      <option name="METHOD_NAME" value="preorderTraversal_CorrectTree_CorrectResult" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -142,9 +139,9 @@
       <list>
         <item itemvalue="JUnit.TreeTraversalTest" />
         <item itemvalue="JUnit.TreeTraversalTest.PreorderTraversal_EmptyTree" />
+        <item itemvalue="JUnit.TreeTraversalTest.preorderTraversal_CorrectTree_CorrectResult" />
         <item itemvalue="JUnit.TreeTraversalTest.testPreorderTraversal" />
         <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.TreeTraversalTest.getAddressListWhereAgeGreaterThan_AllAddressIsNull_ExpectedResult" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685515030999</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add tests">
+      <created>1685517607155</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685517607155</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,5 +215,16 @@
     <MESSAGE value="add lombok and TreeNode class" />
     <MESSAGE value="add tests" />
     <option name="LAST_COMMIT_MESSAGE" value="add tests" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ru/alex/TreeTraversalTest.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
