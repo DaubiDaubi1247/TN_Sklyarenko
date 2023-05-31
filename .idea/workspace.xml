@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9ff40af-3184-4a33-814e-59489fee0ebb" name="Changes" comment="create tests for getAddressListWhereAgeGreaterThan">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/alex/utils/TreeHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/alex/utils/TreeNode.java" afterDir="false" />
+    <list default="true" id="e9ff40af-3184-4a33-814e-59489fee0ebb" name="Changes" comment="add tests">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/utils/person/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/utils/person/PersonCreator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/utils/person/PersonHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/alex/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/alex/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/utils/TreeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/utils/TreeHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/utils/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/utils/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/alex/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/alex/TreeTraversalTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,19 +48,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Application.App">
+}]]></component>
+  <component name="RunManager" selected="JUnit.TreeTraversalTest">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.alex.App" />
       <module name="tn" />
@@ -77,7 +75,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TreeTraversalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tn" />
       <extension name="coverage">
         <pattern>
@@ -86,13 +84,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.alex" />
-      <option name="MAIN_CLASS_NAME" value="ru.alex.AppTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.alex.TreeTraversalTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.getAddressListWhereAgeGreaterThan_AllAddressIsNull_ExpectedResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TreeTraversalTest.PreorderTraversal_EmptyTree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tn" />
       <extension name="coverage">
         <pattern>
@@ -101,14 +99,30 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.alex" />
-      <option name="MAIN_CLASS_NAME" value="ru.alex.AppTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.alex.TreeTraversalTest" />
+      <option name="METHOD_NAME" value="PreorderTraversal_EmptyTree" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TreeTraversalTest.getAddressListWhereAgeGreaterThan_AllAddressIsNull_ExpectedResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.alex.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.alex" />
+      <option name="MAIN_CLASS_NAME" value="ru.alex.TreeTraversalTest" />
       <option name="METHOD_NAME" value="getAddressListWhereAgeGreaterThan_AllAddressIsNull_ExpectedResult" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.getAddressListWhereAgeGreaterThan_CorrectAddress_ExpectedResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TreeTraversalTest.testPreorderTraversal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tn" />
       <extension name="coverage">
         <pattern>
@@ -117,8 +131,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.alex" />
-      <option name="MAIN_CLASS_NAME" value="ru.alex.AppTest" />
-      <option name="METHOD_NAME" value="getAddressListWhereAgeGreaterThan_CorrectAddress_ExpectedResult" />
+      <option name="MAIN_CLASS_NAME" value="ru.alex.TreeTraversalTest" />
+      <option name="METHOD_NAME" value="testPreorderTraversal" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -126,10 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TreeTraversalTest" />
+        <item itemvalue="JUnit.TreeTraversalTest.PreorderTraversal_EmptyTree" />
+        <item itemvalue="JUnit.TreeTraversalTest.testPreorderTraversal" />
         <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.AppTest.getAddressListWhereAgeGreaterThan_AllAddressIsNull_ExpectedResult" />
-        <item itemvalue="JUnit.AppTest.getAddressListWhereAgeGreaterThan_CorrectAddress_ExpectedResult" />
-        <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="JUnit.TreeTraversalTest.getAddressListWhereAgeGreaterThan_AllAddressIsNull_ExpectedResult" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684823270172</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add lombok and TreeNode class">
+      <created>1685515030999</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685515030999</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,6 +208,8 @@
     <MESSAGE value="create getElementCountsMap method" />
     <MESSAGE value="create getAddressListWhereAgeGreaterThan method" />
     <MESSAGE value="create tests for getAddressListWhereAgeGreaterThan" />
-    <option name="LAST_COMMIT_MESSAGE" value="create tests for getAddressListWhereAgeGreaterThan" />
+    <MESSAGE value="add lombok and TreeNode class" />
+    <MESSAGE value="add tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="add tests" />
   </component>
 </project>

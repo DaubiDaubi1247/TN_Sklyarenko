@@ -1,13 +1,17 @@
 package ru.alex.utils;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
-@AllArgsConstructor
+import java.util.ArrayList;
+import java.util.List;
+
+@RequiredArgsConstructor
 @Getter
-public class TreeNode <T> {
-        private T val;
-        private TreeNode<T> left;
-        private TreeNode<T> right;
+@Setter
+public class TreeNode<T> {
+    private final T val;
+    private List<TreeNode<T>> childrenList = new ArrayList<>();
 
 }

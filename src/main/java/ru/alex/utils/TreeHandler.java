@@ -2,12 +2,15 @@ package ru.alex.utils;
 
 public class TreeHandler {
 
-    public static <T> void preorderTraversal(TreeNode<T> root) {
-        if (root == null)
-            return;
+    private static final StringBuilder treeValues = new StringBuilder();
 
-        System.out.print(root.getVal() + " ");
-        preorderTraversal(root.getLeft());
-        preorderTraversal(root.getRight());
+    public static <T> String preorderTraversal(TreeNode<T> root) {
+        if (root == null)
+            return "";
+
+        treeValues.append(root.getVal()).append(" ");
+        root.getChildrenList().forEach(TreeHandler::preorderTraversal);
+
+        return treeValues.toString();
     }
 }
