@@ -4,6 +4,10 @@
   <groupId>ru.alex</groupId>
   <artifactId>tnQuest</artifactId>
   <packaging>war</packaging>
+  <properties>
+    <maven.compiler.source>19</maven.compiler.source>
+    <maven.compiler.target>19</maven.compiler.target>
+  </properties>
   <version>1.0-SNAPSHOT</version>
   <name>tnQuest Maven Webapp</name>
   <url>http://maven.apache.org</url>
