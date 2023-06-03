@@ -6,7 +6,6 @@ import ru.alex.thQuest.annotation.service.UserService;
 import ru.alex.thQuest.dto.UserDto;
 
 @Component
-@RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
     @Override
