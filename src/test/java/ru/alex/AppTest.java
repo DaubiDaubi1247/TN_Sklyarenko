@@ -6,6 +6,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ru.alex.dataFabric.UserFabric;
 import ru.alex.thQuest.dto.UserDto;
+import ru.alex.thQuest.javaConfig.BeanFactory;
 import ru.alex.thQuest.xml.service.UserService;
 
 public class AppTest {
@@ -26,6 +27,16 @@ public class AppTest {
         var applicationContext = new AnnotationConfigApplicationContext("ru.alex.thQuest.annotation");
 
         var userService = applicationContext.getBean(ru.alex.thQuest.annotation.service.UserService.class);
+
+        UserDto userDto = UserFabric.getUserDto();
+        Assertions.assertEquals(userDto, userService.createUser(userDto));
+    }
+
+    @Test
+    void testCreateBean_JavaConfig() {
+        var applicationContext = new AnnotationConfigApplicationContext(BeanFactory.class);
+
+        var userService = applicationContext.getBean(ru.alex.thQuest.javaConfig.service.UserService.class);
 
         UserDto userDto = UserFabric.getUserDto();
         Assertions.assertEquals(userDto, userService.createUser(userDto));
