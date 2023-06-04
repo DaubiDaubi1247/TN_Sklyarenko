@@ -1,8 +1,8 @@
-package ru.alex.thQuest.javaConfig.service.Impl;
+package ru.alex.tnQuest.annotation.service.Impl;
 
 import org.springframework.stereotype.Component;
-import ru.alex.thQuest.dto.UserDto;
-import ru.alex.thQuest.javaConfig.service.UserService;
+import ru.alex.tnQuest.annotation.service.UserService;
+import ru.alex.tnQuest.dto.UserDto;
 
 @Component
 public class UserServiceImpl implements UserService {

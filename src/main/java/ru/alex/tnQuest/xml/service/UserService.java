@@ -1,6 +1,6 @@
-package ru.alex.thQuest.xml.service;
+package ru.alex.tnQuest.xml.service;
 
-import ru.alex.thQuest.dto.UserDto;
+import ru.alex.tnQuest.dto.UserDto;
 
 public interface UserService {
 

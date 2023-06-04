@@ -1,7 +1,7 @@
-package ru.alex.thQuest.xml.service.Impl;
+package ru.alex.tnQuest.xml.service.Impl;
 
-import ru.alex.thQuest.dto.UserDto;
-import ru.alex.thQuest.xml.service.UserService;
+import ru.alex.tnQuest.dto.UserDto;
+import ru.alex.tnQuest.xml.service.UserService;
 
 public class UserServiceImpl implements UserService {
 

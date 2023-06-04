@@ -1,6 +1,6 @@
-package ru.alex.dataFabric;
+package ru.alex.tnQuest.dataFabric;
 
-import ru.alex.thQuest.dto.UserDto;
+import ru.alex.tnQuest.dto.UserDto;
 
 public class UserFabric {
 

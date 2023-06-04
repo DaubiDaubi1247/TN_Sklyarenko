@@ -1,4 +1,4 @@
-package ru.alex.thQuest.dto;
+package ru.alex.tnQuest.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
