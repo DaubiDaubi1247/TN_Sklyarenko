@@ -18,19 +18,24 @@ public class BankRepository {
     private static final String GET_ALL_BANK_SQL = "SELECT * " +
             "FROM bank";
 
-    public static List<Bank> updateAllBanks() throws SQLException {
+    public static List<Bank> updateAllBanks(List<String> newBankNamesList) {
 
         try (Connection connection = DataBaseConnector.getConnection()) {
             connection.setAutoCommit(false);
 
             try (PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_ALL_BANK_SQL)) {
-                preparedStatement.executeQuery();
+                for (String newBankName : newBankNamesList) {
+                    preparedStatement.setString(1, newBankName);
+                    preparedStatement.addBatch();
+                }
                 connection.commit();
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
 
             connection.setAutoCommit(true);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
 
         return getAllBanks();

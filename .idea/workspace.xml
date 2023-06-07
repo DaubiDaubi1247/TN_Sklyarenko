@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fbd5372-3a12-4c33-8ed1-906ee97f1fa1" name="Changes" comment="add postgres dependecy">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/alex/entity/Bank.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/alex/repository/BankRepository.java" afterDir="false" />
+    <list default="true" id="0fbd5372-3a12-4c33-8ed1-906ee97f1fa1" name="Changes" comment="create updateAllBanks method">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/alex/service/BankService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/alex/service/Impl/BankServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/alex/BankTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/db/DataBaseConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/db/DataBaseConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/repository/BankRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/repository/BankRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/alex/UserTestApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/alex/UserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +68,13 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.UserTestApp.testGetAllUsersSurnames_ReturnCorrectValues">
-    <configuration name="UserTestApp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.alex.service.Impl" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tn" />
       <extension name="coverage">
         <pattern>
@@ -76,13 +83,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.alex" />
-      <option name="MAIN_CLASS_NAME" value="ru.alex.UserTestApp" />
+      <option name="MAIN_CLASS_NAME" value="ru.alex.UserTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTestApp.PreorderTraversal_EmptyTree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserTest.PreorderTraversal_EmptyTree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tn" />
       <extension name="coverage">
         <pattern>
@@ -91,14 +98,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.alex" />
-      <option name="MAIN_CLASS_NAME" value="ru.alex.UserTestApp" />
+      <option name="MAIN_CLASS_NAME" value="ru.alex.UserTest" />
       <option name="METHOD_NAME" value="PreorderTraversal_EmptyTree" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTestApp.preorderTraversal_CorrectTree_CorrectResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserTest.preorderTraversal_CorrectTree_CorrectResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tn" />
       <extension name="coverage">
         <pattern>
@@ -107,14 +114,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.alex" />
-      <option name="MAIN_CLASS_NAME" value="ru.alex.UserTestApp" />
+      <option name="MAIN_CLASS_NAME" value="ru.alex.UserTest" />
       <option name="METHOD_NAME" value="preorderTraversal_CorrectTree_CorrectResult" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTestApp.testGetAllUsersSurnames_ReturnCorrectValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserTest.testGetAllUsersSurnames_ReturnCorrectValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tn" />
       <extension name="coverage">
         <pattern>
@@ -123,14 +130,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.alex" />
-      <option name="MAIN_CLASS_NAME" value="ru.alex.UserTestApp" />
+      <option name="MAIN_CLASS_NAME" value="ru.alex.UserTest" />
       <option name="METHOD_NAME" value="testGetAllUsersSurnames_ReturnCorrectValues" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTestApp.testPreorderTraversal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserTest.testPreorderTraversal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tn" />
       <extension name="coverage">
         <pattern>
@@ -139,7 +146,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.alex" />
-      <option name="MAIN_CLASS_NAME" value="ru.alex.UserTestApp" />
+      <option name="MAIN_CLASS_NAME" value="ru.alex.UserTest" />
       <option name="METHOD_NAME" value="testPreorderTraversal" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -161,11 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserTestApp.testGetAllUsersSurnames_ReturnCorrectValues" />
+        <item itemvalue="JUnit.UserTest.testGetAllUsersSurnames_ReturnCorrectValues" />
         <item itemvalue="JUnit.UserTestApp" />
-        <item itemvalue="JUnit.UserTestApp.PreorderTraversal_EmptyTree" />
-        <item itemvalue="JUnit.UserTestApp.preorderTraversal_CorrectTree_CorrectResult" />
-        <item itemvalue="JUnit.UserTestApp.testPreorderTraversal" />
+        <item itemvalue="JUnit.UserTest.PreorderTraversal_EmptyTree" />
+        <item itemvalue="JUnit.UserTest.preorderTraversal_CorrectTree_CorrectResult" />
+        <item itemvalue="JUnit.UserTest.testPreorderTraversal" />
       </list>
     </recent_temporary>
   </component>
@@ -242,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686144010520</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="create updateAllBanks method">
+      <created>1686145203119</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1686145203119</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,13 +284,14 @@
     <MESSAGE value="create UserRepository and getAllUsers method" />
     <MESSAGE value="create UserServiceImpl" />
     <MESSAGE value="add postgres dependecy" />
-    <option name="LAST_COMMIT_MESSAGE" value="add postgres dependecy" />
+    <MESSAGE value="create updateAllBanks method" />
+    <option name="LAST_COMMIT_MESSAGE" value="create updateAllBanks method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ru/alex/UserTestApp.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/ru/alex/UserTest.java</url>
           <line>45</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>

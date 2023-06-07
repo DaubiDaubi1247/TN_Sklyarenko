@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Unit test for simple App.
  */
-public class UserTestApp {
+public class UserTest {
 
     private static final List<String> SURNAMES_FOR_TEST = List.of("Иванов", "Сидоров", "Петров", "Наличный");
     private static UserService userService;
