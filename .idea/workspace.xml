@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fbd5372-3a12-4c33-8ed1-906ee97f1fa1" name="Changes" comment="create UserRepository and getAllUsers method">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/alex/service/Impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/alex/service/UserService.java" afterDir="false" />
+    <list default="true" id="0fbd5372-3a12-4c33-8ed1-906ee97f1fa1" name="Changes" comment="create UserServiceImpl">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/alex/TreeTraversalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/alex/UserTestApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/db/DataBaseConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/db/DataBaseConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/alex/UserTestApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/alex/UserTestApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,20 +65,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.alex.App" />
-      <module name="tn" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.alex.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.UserTestApp.testGetAllUsersSurnames_ReturnCorrectValues">
     <configuration name="UserTestApp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tn" />
       <extension name="coverage">
@@ -127,6 +113,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserTestApp.testGetAllUsersSurnames_ReturnCorrectValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.alex.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.alex" />
+      <option name="MAIN_CLASS_NAME" value="ru.alex.UserTestApp" />
+      <option name="METHOD_NAME" value="testGetAllUsersSurnames_ReturnCorrectValues" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserTestApp.testPreorderTraversal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tn" />
       <extension name="coverage">
@@ -158,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserTestApp.testGetAllUsersSurnames_ReturnCorrectValues" />
         <item itemvalue="JUnit.UserTestApp" />
         <item itemvalue="JUnit.UserTestApp.PreorderTraversal_EmptyTree" />
         <item itemvalue="JUnit.UserTestApp.preorderTraversal_CorrectTree_CorrectResult" />
         <item itemvalue="JUnit.UserTestApp.testPreorderTraversal" />
-        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -225,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686142074133</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="create UserServiceImpl">
+      <created>1686142773275</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1686142773275</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +260,8 @@
     <MESSAGE value="add tests" />
     <MESSAGE value="create DataBaseConnector class" />
     <MESSAGE value="create UserRepository and getAllUsers method" />
-    <option name="LAST_COMMIT_MESSAGE" value="create UserRepository and getAllUsers method" />
+    <MESSAGE value="create UserServiceImpl" />
+    <option name="LAST_COMMIT_MESSAGE" value="create UserServiceImpl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
