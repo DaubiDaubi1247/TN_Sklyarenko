@@ -28,4 +28,8 @@ public class DataBaseConnector {
             throw new RuntimeException(e);
         }
     }
+
+    public static Connection getConnection() {
+        return connection;
+    }
 }
