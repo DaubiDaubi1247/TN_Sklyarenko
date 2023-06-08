@@ -4,24 +4,30 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.ImportResource;
+import ru.alex.tnQuest.annotation.service.Impl.BookServiceImpl;
+import ru.alex.tnQuest.dataFabric.BookFabric;
 import ru.alex.tnQuest.dataFabric.UserFabric;
+import ru.alex.tnQuest.dto.BookDto;
 import ru.alex.tnQuest.dto.UserDto;
-import ru.alex.tnQuest.xml.service.Impl.UserServiceImpl;
+import ru.alex.tnQuest.javaConfig.service.Impl.UserServiceImpl;
+
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest
+@ImportResource("classpath:applicationContext.xml")
 public class AppTest {
 
     @Mock
     private UserServiceImpl userServiceXml;
 
     @Mock
-    private ru.alex.tnQuest.annotation.service.Impl.UserServiceImpl userServiceAnnotation;
+    private BookServiceImpl userServiceAnnotation;
 
     @Mock
-    private ru.alex.tnQuest.javaConfig.service.Impl.UserServiceImpl userServiceJavaConfig;
+    private UserServiceImpl userServiceJavaConfig;
 
     @Test
     void testCreateBean_XmlConfig() {
@@ -35,10 +41,10 @@ public class AppTest {
     @Test
     void testCreateBean_AnnotationConfig() {
 
-        UserDto userDto = UserFabric.getUserDto();
-        when(userServiceAnnotation.createUser(any(UserDto.class))).thenReturn(new UserDto(userDto.getName(), userDto.getPassword()));
+        var bookDto = BookFabric.getBookDto();
+        when(userServiceAnnotation.addBook(any(BookDto.class))).thenReturn(new BookDto(bookDto.getAuthor()));
 
-        Assertions.assertEquals(userDto, userServiceAnnotation.createUser(userDto));
+        Assertions.assertEquals(bookDto, userServiceAnnotation.addBook(bookDto));
     }
 
     @Test
