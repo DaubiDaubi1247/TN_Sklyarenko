@@ -9,5 +9,8 @@
         <module name="tnQuest" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="tn" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>

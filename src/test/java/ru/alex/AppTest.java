@@ -6,8 +6,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ru.alex.dataFabric.UserFabric;
 import ru.alex.thQuest.dto.UserDto;
-import ru.alex.thQuest.javaConfig.BeanFactory;
-import ru.alex.thQuest.xml.service.UserService;
+import ru.alex.thQuest.javaConfig.AppConfiguration;
+import ru.alex.thQuest.javaConfig.service.UserService;
+
 
 public class AppTest {
 
@@ -34,7 +35,7 @@ public class AppTest {
 
     @Test
     void testCreateBean_JavaConfig() {
-        var applicationContext = new AnnotationConfigApplicationContext(BeanFactory.class);
+        var applicationContext = new AnnotationConfigApplicationContext(AppConfiguration.class);
 
         var userService = applicationContext.getBean(ru.alex.thQuest.javaConfig.service.UserService.class);
 

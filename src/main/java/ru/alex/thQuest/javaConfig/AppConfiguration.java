@@ -6,7 +6,7 @@ import ru.alex.thQuest.javaConfig.service.Impl.UserServiceImpl;
 import ru.alex.thQuest.javaConfig.service.UserService;
 
 @Configuration
-public class BeanFactory {
+public class AppConfiguration {
 
     @Bean
     public UserService createUserServiceBean() {
