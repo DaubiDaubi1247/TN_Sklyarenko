@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9ff40af-3184-4a33-814e-59489fee0ebb" name="Changes" comment="add tests">
+    <list default="true" id="e9ff40af-3184-4a33-814e-59489fee0ebb" name="Changes" comment="change solution with new TreeNode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/utils/TreeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/utils/TreeHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/utils/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/utils/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/alex/TreeTraversalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/alex/TreeTraversalTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,6 +208,7 @@
     <MESSAGE value="create tests for getAddressListWhereAgeGreaterThan" />
     <MESSAGE value="add lombok and TreeNode class" />
     <MESSAGE value="add tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="add tests" />
+    <MESSAGE value="change solution with new TreeNode" />
+    <option name="LAST_COMMIT_MESSAGE" value="change solution with new TreeNode" />
   </component>
 </project>

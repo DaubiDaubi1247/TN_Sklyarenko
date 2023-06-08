@@ -9,7 +9,9 @@ public class TreeHandler {
             return "";
 
         treeValues.append(root.getVal()).append(" ");
-        root.getChildrenList().forEach(this::preorderTraversal);
+
+        preorderTraversal(root.getLeft());
+        preorderTraversal(root.getRight());
 
         return treeValues.toString();
     }

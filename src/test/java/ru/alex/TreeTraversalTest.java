@@ -7,8 +7,6 @@ import org.junit.jupiter.api.Test;
 import ru.alex.utils.TreeHandler;
 import ru.alex.utils.TreeNode;
 
-import java.util.Arrays;
-
 /**
  * Unit test for simple App.
  */
@@ -27,17 +25,13 @@ public class TreeTraversalTest {
 
     @BeforeAll
     public static void initTree() {
-        TreeNode<Integer> node4 = new TreeNode<>(4);
 
-        TreeNode<Integer> node5 = new TreeNode<>(5);
-
-        TreeNode<Integer> node2 = new TreeNode<>(2);
-        node2.setChildrenList(Arrays.asList(node4, node5));
-
-        TreeNode<Integer> node3 = new TreeNode<>(3);
 
         root = new TreeNode<>(1);
-        root.setChildrenList(Arrays.asList(node2, node3));
+        root.setLeft(new TreeNode<>(2));
+        root.setRight(new TreeNode<>(3));
+        root.getLeft().setLeft(new TreeNode<>(4));
+        root.getLeft().setRight(new TreeNode<>(5));
     }
 
     @Test
