@@ -7,22 +7,25 @@ public class TreeHandler {
 
     public static <T> String breadthFirstTraversal(TreeNode<T> root) {
 
-        var treeValues = new StringBuilder();
+        if (root == null) {
+            return "";
+        }
 
-        if (root == null)
-            return treeValues.toString();
+        var treeValues = new StringBuilder();
 
         Queue<TreeNode<T>> queue = new LinkedList<>();
         queue.offer(root);
 
         while (!queue.isEmpty()) {
-            TreeNode<T> node = queue.poll();
-            treeValues.append(node.getVal()).append(" ");
+            TreeNode<T> current = queue.poll();
+            treeValues.append(current.getValue()).append(" ");
 
-            if (node.getChildrenList() != null) {
-                for (TreeNode<T> child : node.getChildrenList()) {
-                    queue.offer(child);
-                }
+            if (current.getLeft() != null) {
+                queue.offer(current.getLeft());
+            }
+
+            if (current.getRight() != null) {
+                queue.offer(current.getRight());
             }
         }
 
