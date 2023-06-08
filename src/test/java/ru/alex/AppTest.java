@@ -7,8 +7,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ru.alex.dataFabric.BookFabric;
 import ru.alex.dataFabric.UserFabric;
 import ru.alex.thQuest.annotation.service.BookService;
-import ru.alex.thQuest.dto.BookDto;
-import ru.alex.thQuest.dto.UserDto;
 import ru.alex.thQuest.javaConfig.AppConfiguration;
 import ru.alex.thQuest.javaConfig.service.UserService;
 
@@ -20,9 +18,9 @@ public class AppTest {
         var applicationContext = new ClassPathXmlApplicationContext(
                 "applicationContext.xml");
 
-        UserDto userDto = UserFabric.getUserDto();
+        var userService = applicationContext.getBean(UserService.class);
 
-        UserService userService = applicationContext.getBean(UserService.class);
+        var userDto = UserFabric.getUserDto();
         Assertions.assertEquals(userDto, userService.createUser(userDto));
     }
 
@@ -32,7 +30,7 @@ public class AppTest {
 
         var bookService = applicationContext.getBean(BookService.class);
 
-        BookDto bookDto = BookFabric.getBookDto();
+        var bookDto = BookFabric.getBookDto();
         Assertions.assertEquals(bookDto, bookService.addBook(bookDto));
     }
 
@@ -42,7 +40,7 @@ public class AppTest {
 
         var userService = applicationContext.getBean(UserService.class);
 
-        UserDto userDto = UserFabric.getUserDto();
+        var userDto = UserFabric.getUserDto();
         Assertions.assertEquals(userDto, userService.createUser(userDto));
     }
 }
