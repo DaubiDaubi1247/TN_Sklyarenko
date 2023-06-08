@@ -13,32 +13,32 @@ import java.util.List;
 public class BankRepository {
 
     private static final String UPDATE_ALL_BANK_SQL = "UPDATE bank " +
-            "SET name = name + 'a'";
+            "SET name = ?";
 
     private static final String GET_ALL_BANK_SQL = "SELECT * " +
             "FROM bank";
 
-    public static List<Bank> updateAllBanks(List<String> newBankNamesList) {
+    public static List<Bank> updateAllBanks(String newBankName) {
 
         try (Connection connection = DataBaseConnector.getConnection()) {
             connection.setAutoCommit(false);
 
             try (PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_ALL_BANK_SQL)) {
-                for (String newBankName : newBankNamesList) {
-                    preparedStatement.setString(1, newBankName);
-                    preparedStatement.addBatch();
-                }
+                preparedStatement.setString(1, newBankName);
+                preparedStatement.executeUpdate();
+
                 connection.commit();
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
 
             connection.setAutoCommit(true);
+
+            return getAllBanks();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
-        return getAllBanks();
     }
 
     public static List<Bank> getAllBanks() {
