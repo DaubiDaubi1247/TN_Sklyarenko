@@ -6,7 +6,7 @@ import ru.alex.tnQuest.javaConfig.service.Impl.UserServiceImpl;
 import ru.alex.tnQuest.javaConfig.service.UserService;
 
 @Configuration
-public class BeanFactory {
+public class ApplicationConfig {
 
     @Bean
     public UserService createUserServiceBean() {
