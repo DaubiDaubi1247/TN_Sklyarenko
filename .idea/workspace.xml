@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fbd5372-3a12-4c33-8ed1-906ee97f1fa1" name="Changes" comment="create updateAllBanks method and test">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/rollback.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/repository/BankRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/repository/BankRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/service/BankService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/service/BankService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/service/Impl/BankServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/service/Impl/BankServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/alex/BankTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/alex/BankTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="0fbd5372-3a12-4c33-8ed1-906ee97f1fa1" name="Changes" comment="add test service" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="medium-8" />
+        <entry key="$PROJECT_DIR$" value="high-4" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -64,7 +54,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "aafb96b2fa8806be307c4496867bad56",
+    "spring.configuration.checksum": "cae25cfd64f4430d1fd1ff4ea33b536d",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
