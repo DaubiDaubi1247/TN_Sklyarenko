@@ -1,20 +1,19 @@
 package ru.alex;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.jdbc.Sql;
+import org.junit.jupiter.api.*;
 import ru.alex.entity.Bank;
 import ru.alex.service.BankService;
 import ru.alex.service.Impl.BankServiceImpl;
+import ru.alex.utils.HibernateSessionFactory;
+import ru.alex.utils.file.FileHandler;
 
 import java.util.List;
 
-@SpringBootTest
 public class BankTest {
 
     private static final String UPDATED_BANK_NAME = "NewBank1";
+
+    private static final String PATH_TO_ROLLBACK_FILE = "src/test/resources/rollback.sql";
     private static BankService bankService;
 
     @BeforeAll
@@ -22,12 +21,26 @@ public class BankTest {
         bankService = new BankServiceImpl();
     }
 
+    @AfterEach
+    public void rollbackDataBase() {
+        try (var session = HibernateSessionFactory.getSessionFactory().openSession()) {
+            session.beginTransaction();
+
+            var sqlQueryFromFile = FileHandler.getSqlQueryFromFile(PATH_TO_ROLLBACK_FILE);
+            session.createNativeQuery(sqlQueryFromFile).executeUpdate();
+
+            session.getTransaction().commit();
+        }
+    }
+
     @Test
-    @Sql(value = "classpath:rollback.sql", executionPhase = Sql.ExecutionPhase.AFTER_TEST_METHOD)
     public void testUpdateAllBankNames_ReturnCorrectValues() {
-        List<String> updatedBankNames = bankService.updateAllBankNames(UPDATED_BANK_NAME)
-                .stream().map(Bank::getName)
-                .toList();
+
+        List<String> updatedBankNames;
+
+        updatedBankNames = bankService.updateAllBankNames(UPDATED_BANK_NAME)
+            .stream().map(Bank::getName)
+            .toList();
 
         Assertions.assertTrue(updatedBankNames.stream()
                 .allMatch(UPDATED_BANK_NAME::equals));

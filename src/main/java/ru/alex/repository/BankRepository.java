@@ -1,62 +1,44 @@
 package ru.alex.repository;
 
 import ru.alex.entity.Bank;
+import ru.alex.utils.HibernateSessionFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class BankRepository {
-
-    private static final String UPDATE_ALL_BANK_SQL = "UPDATE bank " +
-            "SET name = ?";
 
     private static final String GET_ALL_BANK_SQL = "SELECT * " +
             "FROM bank";
 
     public static List<Bank> updateAllBanks(String newBankName) {
 
-        try (Connection connection = DataBaseConnector.getConnection()) {
-            connection.setAutoCommit(false);
+        try (var session = HibernateSessionFactory.getSessionFactory().openSession()) {
+            session.beginTransaction();
 
-            try (PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_ALL_BANK_SQL)) {
-                preparedStatement.setString(1, newBankName);
-                preparedStatement.executeUpdate();
+            var bankList = getAllBanks();
 
-                connection.commit();
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
+            for (Bank bank : bankList) {
+                bank.setName(newBankName);
+                session.merge(bank);
             }
 
-            connection.setAutoCommit(true);
+            session.getTransaction().commit();
 
-            return getAllBanks();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
         }
 
+        return getAllBanks();
     }
 
     public static List<Bank> getAllBanks() {
 
-        List<Bank> bankList = new ArrayList<>();
+        List<Bank> bankList;
 
-        try (PreparedStatement preparedStatement = DataBaseConnector.getConnection().prepareStatement(GET_ALL_BANK_SQL)) {
-            ResultSet resultSetAllBanks = preparedStatement.executeQuery();
+        try (var session = HibernateSessionFactory.getSessionFactory().openSession()) {
+            session.beginTransaction();
 
-            while (resultSetAllBanks.next()) {
-                Bank bank = new Bank();
-                bank.setId(resultSetAllBanks.getInt("id"));
-                bank.setName(resultSetAllBanks.getString("name"));
+            bankList = session.createNativeQuery(GET_ALL_BANK_SQL, Bank.class).getResultList();
 
-                bankList.add(bank);
-            }
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+            session.getTransaction().commit();
         }
 
         return bankList;
