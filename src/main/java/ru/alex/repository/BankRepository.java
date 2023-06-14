@@ -1,6 +1,5 @@
 package ru.alex.repository;
 
-import ru.alex.db.DataBaseConnector;
 import ru.alex.entity.Bank;
 
 import java.sql.Connection;

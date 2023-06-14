@@ -1,8 +1,6 @@
 package ru.alex.repository;
 
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import org.hibernate.SessionFactory;
 import ru.alex.entity.User;
 import ru.alex.utils.HibernateSessionFactory;
 
@@ -23,6 +21,8 @@ public class UserRepository {
             userList = session.createNativeQuery(GET_ALL_USERS_SQL, User.class).getResultList();
 
             session.getTransaction().commit();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
 
         return userList;

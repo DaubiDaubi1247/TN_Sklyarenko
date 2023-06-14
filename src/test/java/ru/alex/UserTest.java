@@ -24,6 +24,7 @@ public class UserTest {
 
     @Test
     public void testGetAllUsersSurnames_ReturnCorrectValues() {
+
         Assertions.assertEquals(SURNAMES_FOR_TEST, userService.getAllUserSurnames());
     }
 

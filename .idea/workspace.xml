@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fbd5372-3a12-4c33-8ed1-906ee97f1fa1" name="Changes" comment="delete spring jpa dependecies and add hibernate-core">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/alex/utils/HibernateSessionFactory.java" afterDir="false" />
+    <list default="true" id="0fbd5372-3a12-4c33-8ed1-906ee97f1fa1" name="Changes" comment="dev getUserSurnames with hibernate">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/db/DataBaseConnector.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/repository/BankRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/repository/BankRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/utils/HibernateSessionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/utils/HibernateSessionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/utils/TreeHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/utils/TreeNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/alex/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/alex/UserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +182,7 @@
       <workItem from="1683218148565" duration="320000" />
       <workItem from="1686210214299" duration="5413000" />
       <workItem from="1686218018306" duration="3023000" />
-      <workItem from="1686723276655" duration="607000" />
+      <workItem from="1686723276655" duration="1823000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1684141293202</created>
@@ -262,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686687763317</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="create HibernateSessionFactory">
+      <created>1686724104361</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1686724104361</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,17 +306,8 @@
     <MESSAGE value="create updateAllBanks method" />
     <MESSAGE value="create updateAllBanks method and test" />
     <MESSAGE value="delete spring jpa dependecies and add hibernate-core" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete spring jpa dependecies and add hibernate-core" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ru/alex/UserTest.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="create HibernateSessionFactory" />
+    <MESSAGE value="dev getUserSurnames with hibernate" />
+    <option name="LAST_COMMIT_MESSAGE" value="dev getUserSurnames with hibernate" />
   </component>
 </project>

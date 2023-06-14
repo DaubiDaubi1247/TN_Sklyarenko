@@ -2,8 +2,6 @@ package ru.alex.utils;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import ru.alex.entity.Bank;
-import ru.alex.entity.User;
 
 public class HibernateSessionFactory {
 
@@ -12,8 +10,7 @@ public class HibernateSessionFactory {
     static {
         try {
             Configuration configuration = new Configuration().configure();
-            configuration.addAnnotatedClass(User.class);
-            configuration.addAnnotatedClass(Bank.class);
+            configuration.configure("hibernate.cfg.xml");
             sessionFactory = configuration.buildSessionFactory();
 
         } catch (Exception e) {
