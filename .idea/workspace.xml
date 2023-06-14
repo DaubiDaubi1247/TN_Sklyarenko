@@ -78,7 +78,7 @@
       <recent name="D:\springApps\tn\tnQuest\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BankTest">
+  <component name="RunManager" selected="JUnit.java in tn">
     <configuration name="BankTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tnQuest" />
       <extension name="coverage">
@@ -141,28 +141,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tnQuest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.alex.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.alex" />
-      <option name="MAIN_CLASS_NAME" value="ru.alex.UserTest" />
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="java in tn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tn" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.java in tn" />
         <item itemvalue="JUnit.BankTest" />
         <item itemvalue="JUnit.BankTest.testUpdateAllBankNames_ReturnCorrectValues" />
         <item itemvalue="JUnit.BankTest.testUpdateAllBankNames_ReturnCorrectValues (1)" />
         <item itemvalue="JUnit.BankTest (1)" />
-        <item itemvalue="JUnit.UserTest" />
       </list>
     </recent_temporary>
   </component>
