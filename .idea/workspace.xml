@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fbd5372-3a12-4c33-8ed1-906ee97f1fa1" name="Changes" comment="dev getUserSurnames with hibernate">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/alex/utils/file/FileHandler.java" afterDir="false" />
+    <list default="true" id="0fbd5372-3a12-4c33-8ed1-906ee97f1fa1" name="Changes" comment="refactor testGetAllUsersSurnames_ReturnCorrectValues">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/entity/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/entity/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/repository/BankRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/repository/BankRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/alex/BankTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/alex/BankTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +167,7 @@
       <workItem from="1686210214299" duration="5413000" />
       <workItem from="1686218018306" duration="3023000" />
       <workItem from="1686723276655" duration="6150000" />
-      <workItem from="1686737157831" duration="2051000" />
+      <workItem from="1686737157831" duration="2676000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1684141293202</created>
@@ -271,7 +267,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686725113971</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add afterEach rollback db method">
+      <created>1686739315003</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1686739315003</updated>
+    </task>
+    <task id="LOCAL-00016" summary="delete spring boot dependencies">
+      <created>1686739517562</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1686739517562</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,6 +314,9 @@
     <MESSAGE value="delete spring jpa dependecies and add hibernate-core" />
     <MESSAGE value="create HibernateSessionFactory" />
     <MESSAGE value="dev getUserSurnames with hibernate" />
-    <option name="LAST_COMMIT_MESSAGE" value="dev getUserSurnames with hibernate" />
+    <MESSAGE value="add afterEach rollback db method" />
+    <MESSAGE value="delete spring boot dependencies" />
+    <MESSAGE value="refactor testGetAllUsersSurnames_ReturnCorrectValues" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor testGetAllUsersSurnames_ReturnCorrectValues" />
   </component>
 </project>

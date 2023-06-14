@@ -1,13 +1,14 @@
 package ru.alex;
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import ru.alex.entity.Bank;
 import ru.alex.service.BankService;
 import ru.alex.service.Impl.BankServiceImpl;
 import ru.alex.utils.HibernateSessionFactory;
 import ru.alex.utils.file.FileHandler;
-
-import java.util.List;
 
 public class BankTest {
 
@@ -36,13 +37,11 @@ public class BankTest {
     @Test
     public void testUpdateAllBankNames_ReturnCorrectValues() {
 
-        List<String> updatedBankNames;
+        var updatedBankNameList = bankService.updateAllBankNames(UPDATED_BANK_NAME)
+                .stream().map(Bank::getName)
+                .toList();
 
-        updatedBankNames = bankService.updateAllBankNames(UPDATED_BANK_NAME)
-            .stream().map(Bank::getName)
-            .toList();
-
-        Assertions.assertTrue(updatedBankNames.stream()
+        Assertions.assertTrue(updatedBankNameList.stream()
                 .allMatch(UPDATED_BANK_NAME::equals));
     }
 }
