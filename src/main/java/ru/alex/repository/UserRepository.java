@@ -1,35 +1,28 @@
 package ru.alex.repository;
 
-import ru.alex.db.DataBaseConnector;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import org.hibernate.SessionFactory;
 import ru.alex.entity.User;
+import ru.alex.utils.HibernateSessionFactory;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
+@AllArgsConstructor
 public class UserRepository {
 
-    private static final String GET_ALL_USERS_SQL = "SELECT * " +
-                                                    "FROM person ";
+    private static final String GET_ALL_USERS_SQL = "SELECT * " + "FROM person ";
 
     public static List<User> getAllUsers() {
 
-        List<User> userList = new ArrayList<>();
+        List<User> userList;
 
-        try (PreparedStatement preparedStatement = DataBaseConnector.getConnection().prepareStatement(GET_ALL_USERS_SQL)) {
-            ResultSet resultSetUser = preparedStatement.executeQuery();
+        try ( var session = HibernateSessionFactory.getSessionFactory().openSession()) {
+            session.beginTransaction();
 
-            while (resultSetUser.next()) {
-                User user = new User();
-                user.setId(resultSetUser.getInt("id"));
-                user.setFullName(resultSetUser.getString("full_name"));
+            userList = session.createNativeQuery(GET_ALL_USERS_SQL, User.class).getResultList();
 
-                userList.add(user);
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+            session.getTransaction().commit();
         }
 
         return userList;
