@@ -8,15 +8,14 @@ public class FileHandler {
 
         StringBuilder sqlQueryFromFile = new StringBuilder();
 
-        try ( var file = new FileReader(pathToFile);
-              var fileBuffer = new BufferedReader(file)) {
+        try ( var fileReader = new FileReader(pathToFile);
+              var fileBuffer = new BufferedReader(fileReader)) {
 
             while (fileBuffer.ready()) {
                 sqlQueryFromFile.append(fileBuffer.readLine()).append("\n");
             }
 
             return sqlQueryFromFile.toString();
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
