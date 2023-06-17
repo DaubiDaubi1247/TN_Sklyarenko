@@ -1,45 +1,41 @@
 package ru.alex;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import ru.alex.entity.Bank;
-import ru.alex.service.BankService;
+import ru.alex.repository.BankRepository;
 import ru.alex.service.Impl.BankServiceImpl;
-import ru.alex.utils.HibernateSessionFactory;
-import ru.alex.utils.file.FileHandler;
 
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.when;
+import static ru.alex.testData.BankTestData.UPDATED_BANK_NAME;
+import static ru.alex.testData.BankTestData.getBanksAfterUpdate;
+
+@ExtendWith(MockitoExtension.class)
 public class BankTest {
 
-    private static final String UPDATED_BANK_NAME = "NewBank1";
+    @Mock
+    private BankRepository bankRepository;
 
-    private static final String PATH_TO_ROLLBACK_FILE = "src/test/resources/rollback.sql";
-    private static BankService bankService;
-
-    @BeforeAll
-    public static void initService() {
-        bankService = new BankServiceImpl();
-    }
-
-    @AfterEach
-    public void rollbackDataBase() {
-        try (var session = HibernateSessionFactory.getSessionFactory().openSession()) {
-            session.beginTransaction();
-
-            var sqlQueryFromFile = FileHandler.getSqlQueryFromFile(PATH_TO_ROLLBACK_FILE);
-            session.createNativeQuery(sqlQueryFromFile).executeUpdate();
-
-            session.getTransaction().commit();
-        }
-    }
+    @InjectMocks
+    private BankServiceImpl bankService;
 
     @Test
     public void testUpdateAllBankNames_ReturnCorrectValues() {
 
-        var updatedBankNameList = bankService.updateAllBankNames(UPDATED_BANK_NAME)
-                .stream().map(Bank::getName)
+        when(bankRepository.updateAllBanks(eq(UPDATED_BANK_NAME))).thenReturn(getBanksAfterUpdate());
+
+        var updatedBank = bankService.updateAllBankNames(UPDATED_BANK_NAME);
+
+        var updatedBankNameList = updatedBank.stream()
+                .map(Bank::getName)
                 .toList();
+
+        Assertions.assertTrue(updatedBankNameList.size() != 0);
 
         Assertions.assertTrue(updatedBankNameList.stream()
                 .allMatch(UPDATED_BANK_NAME::equals));

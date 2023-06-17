@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fbd5372-3a12-4c33-8ed1-906ee97f1fa1" name="Changes" comment="add spring-boot-data-jpa dependencies">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/repository/BankRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/repository/BankRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/service/Impl/BankServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/service/Impl/BankServiceImpl.java" afterDir="false" />
+    <list default="true" id="0fbd5372-3a12-4c33-8ed1-906ee97f1fa1" name="Changes" comment="remake bank repository and service with spring boot data jpa">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/alex/testData/BankTestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/entity/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/entity/Bank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/alex/BankTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/alex/BankTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +78,7 @@
       <recent name="D:\springApps\tn\tnQuest\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.java in tn">
+  <component name="RunManager" selected="JUnit.BankTest.testUpdateAllBankNames_ReturnCorrectValues">
     <configuration name="BankTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tnQuest" />
       <extension name="coverage">
@@ -148,9 +151,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.java in tn" />
-        <item itemvalue="JUnit.BankTest" />
         <item itemvalue="JUnit.BankTest.testUpdateAllBankNames_ReturnCorrectValues" />
+        <item itemvalue="JUnit.BankTest" />
+        <item itemvalue="JUnit.java in tn" />
         <item itemvalue="JUnit.BankTest.testUpdateAllBankNames_ReturnCorrectValues (1)" />
         <item itemvalue="JUnit.BankTest (1)" />
       </list>
@@ -170,7 +173,7 @@
       <workItem from="1686723276655" duration="6150000" />
       <workItem from="1686737157831" duration="2691000" />
       <workItem from="1686835272133" duration="717000" />
-      <workItem from="1686992826694" duration="710000" />
+      <workItem from="1686992826694" duration="2304000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1684141293202</created>
@@ -305,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686993343325</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="remake bank repository and service with spring boot data jpa">
+      <created>1686993563556</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1686993563556</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,6 +365,23 @@
     <MESSAGE value="refactor testGetAllUsersSurnames_ReturnCorrectValues" />
     <MESSAGE value="rename file into fileBuffer" />
     <MESSAGE value="add spring-boot-data-jpa dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="add spring-boot-data-jpa dependencies" />
+    <MESSAGE value="remake bank repository and service with spring boot data jpa" />
+    <option name="LAST_COMMIT_MESSAGE" value="remake bank repository and service with spring boot data jpa" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ru/alex/BankTest.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ru/alex/testData/BankTestData.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
