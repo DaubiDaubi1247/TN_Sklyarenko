@@ -1,5 +1,6 @@
 package ru.alex.service.Impl;
 
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.alex.entity.Bank;
@@ -15,6 +16,7 @@ public class BankServiceImpl implements BankService {
     private final BankRepository bankRepository;
 
     @Override
+    @Transactional
     public List<Bank> updateAllBankNames(String newBankName) {
         return bankRepository.updateAllBanks(newBankName);
     }
