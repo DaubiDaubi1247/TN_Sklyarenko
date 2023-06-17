@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fbd5372-3a12-4c33-8ed1-906ee97f1fa1" name="Changes" comment="rename file into fileBuffer">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="0fbd5372-3a12-4c33-8ed1-906ee97f1fa1" name="Changes" comment="add spring-boot-data-jpa dependencies">
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/repository/BankRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/repository/BankRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/service/Impl/BankServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/service/Impl/BankServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +170,7 @@
       <workItem from="1686723276655" duration="6150000" />
       <workItem from="1686737157831" duration="2691000" />
       <workItem from="1686835272133" duration="717000" />
-      <workItem from="1686992826694" duration="309000" />
+      <workItem from="1686992826694" duration="710000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1684141293202</created>
@@ -299,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686836003506</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add spring-boot-data-jpa dependencies">
+      <created>1686993343325</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1686993343325</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,6 +354,7 @@
     <MESSAGE value="delete spring boot dependencies" />
     <MESSAGE value="refactor testGetAllUsersSurnames_ReturnCorrectValues" />
     <MESSAGE value="rename file into fileBuffer" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename file into fileBuffer" />
+    <MESSAGE value="add spring-boot-data-jpa dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="add spring-boot-data-jpa dependencies" />
   </component>
 </project>
