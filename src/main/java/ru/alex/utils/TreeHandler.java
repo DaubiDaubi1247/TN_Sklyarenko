@@ -13,6 +13,6 @@ public class TreeHandler {
         preorderTraversal(root.getLeft());
         preorderTraversal(root.getRight());
 
-        return treeValues.toString();
+        return treeValues.toString().trim();
     }
 }
