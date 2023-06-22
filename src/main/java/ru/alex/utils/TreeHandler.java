@@ -29,6 +29,6 @@ public class TreeHandler {
             }
         }
 
-        return treeValues.toString();
+        return treeValues.toString().trim();
     }
 }

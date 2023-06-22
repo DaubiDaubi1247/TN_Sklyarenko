@@ -11,7 +11,7 @@ import ru.alex.utils.TreeNode;
  */
 public class TreeTraversalTest {
 
-    public static final String EXPECTED_TEST_1 = "1 2 3 4 5 ";
+    public static final String EXPECTED_TEST_1 = "1 2 3 4 5";
     public static final String EXPECTED_TEST_2 = "";
     private static TreeNode<Integer> root;
 
