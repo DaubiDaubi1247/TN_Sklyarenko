@@ -4,19 +4,19 @@ public class TreeHandler {
 
     private final StringBuilder treeValues = new StringBuilder();
 
-    public  <T> String postorderTraversal(TreeNode<T> root) {
+    public  <T> String inorderTraversal(TreeNode<T> root) {
         if (root == null)
             return "";
 
         if (root.getLeft() != null) {
-            postorderTraversal(root.getLeft());
-        }
-
-        if (root.getRight() != null) {
-            postorderTraversal(root.getRight());
+            inorderTraversal(root.getLeft());
         }
 
         treeValues.append(root.getVal()).append(" ");
+
+        if (root.getRight() != null) {
+            inorderTraversal(root.getRight());
+        }
 
         return treeValues.toString().trim();
     }

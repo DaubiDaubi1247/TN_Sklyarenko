@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9ff40af-3184-4a33-814e-59489fee0ebb" name="Changes" comment="create test for UserServiceImpl">
+    <list default="true" id="e9ff40af-3184-4a33-814e-59489fee0ebb" name="Changes" comment="create postorder method">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/utils/TreeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/utils/TreeHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/alex/TreeTraversalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/alex/TreeTraversalTest.java" afterDir="false" />
     </list>
@@ -23,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="medium-4" />
+        <entry key="$PROJECT_DIR$" value="medium-6" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -182,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685515030999</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="create postorder method">
+      <created>1687437179470</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1687437179470</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +215,7 @@
     <MESSAGE value="add lombok and TreeNode class" />
     <MESSAGE value="add tests" />
     <MESSAGE value="change solution with new TreeNode" />
-    <option name="LAST_COMMIT_MESSAGE" value="change solution with new TreeNode" />
+    <MESSAGE value="create postorder method" />
+    <option name="LAST_COMMIT_MESSAGE" value="create postorder method" />
   </component>
 </project>

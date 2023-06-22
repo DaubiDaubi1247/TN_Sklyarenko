@@ -12,7 +12,7 @@ import ru.alex.utils.TreeNode;
  */
 public class TreeTraversalTest {
 
-    public static final String EXPECTED_TEST_1 = "4 5 2 3 1";
+    public static final String EXPECTED_TEST_1 = "4 2 5 1 3";
     public static final String EXPECTED_TEST_2 = "";
     private static TreeNode<Integer> root;
 
@@ -33,17 +33,17 @@ public class TreeTraversalTest {
     }
 
     @Test
-    void postorderTraversal_CorrectTree_CorrectResult() {
+    void inorderTraversal_CorrectTree_CorrectResult() {
 
-        String result = treeHandler.postorderTraversal(root);
+        String result = treeHandler.inorderTraversal(root);
 
         Assertions.assertEquals(EXPECTED_TEST_1, result);
     }
 
     @Test
-    void postorderTraversal_EmptyTree() {
+    void inorderTraversal_EmptyTree() {
 
-        String result = treeHandler.postorderTraversal(null);
+        String result = treeHandler.inorderTraversal(null);
 
         Assertions.assertEquals(EXPECTED_TEST_2, result);
     }
