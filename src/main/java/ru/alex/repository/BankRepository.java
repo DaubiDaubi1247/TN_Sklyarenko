@@ -7,8 +7,7 @@ import java.util.List;
 
 public class BankRepository {
 
-    private static final String GET_ALL_BANK_SQL = "SELECT * " +
-            "FROM bank";
+    private static final String GET_ALL_BANK_SQL = "FROM Bank ";
 
     public static List<Bank> updateAllBanks(String newBankName) {
 
@@ -36,7 +35,7 @@ public class BankRepository {
         try (var session = HibernateSessionFactory.getSessionFactory().openSession()) {
             session.beginTransaction();
 
-            bankList = session.createNativeQuery(GET_ALL_BANK_SQL, Bank.class).getResultList();
+            bankList = session.createQuery(GET_ALL_BANK_SQL, Bank.class).getResultList();
 
             session.getTransaction().commit();
         }

@@ -9,7 +9,7 @@ import java.util.List;
 @AllArgsConstructor
 public class UserRepository {
 
-    private static final String GET_ALL_USERS_SQL = "SELECT * " + "FROM person ";
+    private static final String GET_ALL_USERS_SQL = "FROM User ";
 
     public static List<User> getAllUsers() {
 
@@ -18,7 +18,7 @@ public class UserRepository {
         try ( var session = HibernateSessionFactory.getSessionFactory().openSession()) {
             session.beginTransaction();
 
-            userList = session.createNativeQuery(GET_ALL_USERS_SQL, User.class).getResultList();
+            userList = session.createQuery(GET_ALL_USERS_SQL, User.class).getResultList();
 
             session.getTransaction().commit();
         } catch (Exception e) {
