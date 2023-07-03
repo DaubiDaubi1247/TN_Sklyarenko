@@ -35,7 +35,7 @@ public class BankTest {
     }
 
     @Test
-    public void testUpdateAllBankNames_ReturnCorrectValues() {
+    void testUpdateAllBankNames_ReturnCorrectValues() {
 
         var updatedBankNameList = bankService.updateAllBankNames(UPDATED_BANK_NAME)
                 .stream().map(Bank::getName)

@@ -4,8 +4,10 @@ import ru.alex.entity.Bank;
 import ru.alex.utils.HibernateSessionFactory;
 
 import java.util.List;
-
 public class BankRepository {
+
+    private BankRepository() {
+    }
 
     private static final String GET_ALL_BANK_SQL = "FROM Bank ";
 

@@ -1,13 +1,14 @@
 package ru.alex.repository;
 
-import lombok.AllArgsConstructor;
 import ru.alex.entity.User;
 import ru.alex.utils.HibernateSessionFactory;
 
 import java.util.List;
 
-@AllArgsConstructor
 public class UserRepository {
+
+    private UserRepository() {
+    }
 
     private static final String GET_ALL_USERS_SQL = "FROM User ";
 
@@ -21,8 +22,6 @@ public class UserRepository {
             userList = session.createQuery(GET_ALL_USERS_SQL, User.class).getResultList();
 
             session.getTransaction().commit();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
         }
 
         return userList;
