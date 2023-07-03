@@ -11,6 +11,7 @@ import ru.alex.thQuest.bean.UserBean;
 class AppTest {
 
     private final String USER_NAME = "sasha";
+    private final String USER_PASSWORD = "sasha123";
 
     @Autowired
     private UserBean userBean;
@@ -19,6 +20,7 @@ class AppTest {
     void testCreateBean_WithInjectedName() {
 
         Assertions.assertEquals(USER_NAME, userBean.getName());
+        Assertions.assertEquals(USER_PASSWORD, userBean.getPassword());
 
     }
 }

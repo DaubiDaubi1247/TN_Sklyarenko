@@ -12,5 +12,7 @@ public class UserBean {
 
     @Value("${userBean.name}")
     private String name;
+
+    @Value("${user.password}")
     private String password;
 }
