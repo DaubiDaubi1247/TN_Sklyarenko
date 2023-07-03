@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fbd5372-3a12-4c33-8ed1-906ee97f1fa1" name="Changes" comment="create updateAllBanks method and test">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/rollback.sql" afterDir="false" />
+    <list default="true" id="0fbd5372-3a12-4c33-8ed1-906ee97f1fa1" name="Changes" comment="refactor exceptions in services">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/alex/exception/DataAccessException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/alex/exception/FileNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/alex/exception/SqlException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/db/DataBaseConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/db/DataBaseConnector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/repository/BankRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/repository/BankRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/service/BankService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/service/BankService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/service/Impl/BankServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/service/Impl/BankServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/utils/TreeHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/utils/TreeNode.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/alex/BankTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/alex/BankTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/alex/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/alex/UserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +59,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
     "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
     "last_opened_file_path": "D:/springApps/tn/tnQuest/src/main/resources",
@@ -64,7 +67,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "aafb96b2fa8806be307c4496867bad56",
+    "spring.configuration.checksum": "cae25cfd64f4430d1fd1ff4ea33b536d",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -81,7 +84,7 @@
       <recent name="D:\springApps\tn\tnQuest\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BankTest">
+  <component name="RunManager" selected="JUnit.UserTest">
     <configuration name="BankTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tn" />
       <extension name="coverage">
@@ -113,7 +116,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest.PreorderTraversal_EmptyTree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tn" />
       <extension name="coverage">
         <pattern>
@@ -123,51 +126,34 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.alex" />
       <option name="MAIN_CLASS_NAME" value="ru.alex.UserTest" />
-      <option name="METHOD_NAME" value="PreorderTraversal_EmptyTree" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest.preorderTraversal_CorrectTree_CorrectResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="java in tn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tn" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.alex.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.alex" />
-      <option name="MAIN_CLASS_NAME" value="ru.alex.UserTest" />
-      <option name="METHOD_NAME" value="preorderTraversal_CorrectTree_CorrectResult" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest.testGetAllUsersSurnames_ReturnCorrectValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tn" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.alex.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.alex" />
-      <option name="MAIN_CLASS_NAME" value="ru.alex.UserTest" />
-      <option name="METHOD_NAME" value="testGetAllUsersSurnames_ReturnCorrectValues" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration name="java in tnQuest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tnQuest" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserTest" />
+        <item itemvalue="JUnit.java in tn" />
         <item itemvalue="JUnit.BankTest" />
+        <item itemvalue="JUnit.java in tnQuest" />
         <item itemvalue="JUnit.BankTest.testUpdateAllBankNames_ReturnCorrectValues" />
-        <item itemvalue="JUnit.UserTest.testGetAllUsersSurnames_ReturnCorrectValues" />
-        <item itemvalue="JUnit.UserTest.PreorderTraversal_EmptyTree" />
-        <item itemvalue="JUnit.UserTest.preorderTraversal_CorrectTree_CorrectResult" />
       </list>
     </recent_temporary>
   </component>
@@ -182,6 +168,7 @@
       <workItem from="1683218148565" duration="320000" />
       <workItem from="1686210214299" duration="5413000" />
       <workItem from="1686218018306" duration="3023000" />
+      <workItem from="1688388592945" duration="807000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1684141293202</created>
@@ -290,17 +277,7 @@
     <MESSAGE value="add postgres dependecy" />
     <MESSAGE value="create updateAllBanks method" />
     <MESSAGE value="create updateAllBanks method and test" />
-    <option name="LAST_COMMIT_MESSAGE" value="create updateAllBanks method and test" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ru/alex/UserTest.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="refactor exceptions in services" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor exceptions in services" />
   </component>
 </project>

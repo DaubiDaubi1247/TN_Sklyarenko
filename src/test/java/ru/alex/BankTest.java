@@ -24,9 +24,10 @@ public class BankTest {
 
     @Test
     @Sql(value = "classpath:rollback.sql", executionPhase = Sql.ExecutionPhase.AFTER_TEST_METHOD)
-    public void testUpdateAllBankNames_ReturnCorrectValues() {
+    void testUpdateAllBankNames_ReturnCorrectValues() {
         List<String> updatedBankNames = bankService.updateAllBankNames(UPDATED_BANK_NAME)
-                .stream().map(Bank::getName)
+                .stream()
+                .map(Bank::getName)
                 .toList();
 
         Assertions.assertTrue(updatedBankNames.stream()

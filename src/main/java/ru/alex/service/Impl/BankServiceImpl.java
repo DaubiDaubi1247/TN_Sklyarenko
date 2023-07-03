@@ -10,6 +10,6 @@ public class BankServiceImpl implements BankService {
 
     @Override
     public List<Bank> updateAllBankNames(String newBankName) {
-        return BankRepository.updateAllBanks(newBankName);
+        return BankRepository.updateAllBanksNamesOnNewBankName(newBankName);
     }
 }

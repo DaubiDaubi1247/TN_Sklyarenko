@@ -1,5 +1,8 @@
 package ru.alex.db;
 
+import ru.alex.exception.FileNotFoundException;
+import ru.alex.exception.SqlException;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Connection;
@@ -10,22 +13,25 @@ import java.util.Properties;
 public class DataBaseConnector {
     private static final Connection connection;
 
+    private DataBaseConnector() {
+    }
+
     static {
         FileInputStream propertyFile;
         Properties property = new Properties();
 
         try {
-            propertyFile = new FileInputStream("src/main/resources/dbConfig.properties");
+            propertyFile = new FileInputStream("src/main/resources/application.properties");
             property.load(propertyFile);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new FileNotFoundException("properties file not found", e);
         }
 
         try {
-            connection = DriverManager.getConnection(property.getProperty("db.url"), property.getProperty("db.user"),
-                    property.getProperty("db.password"));
+            connection = DriverManager.getConnection(property.getProperty("spring.datasource.url"), property.getProperty("spring.datasource.username"),
+                    property.getProperty("spring.datasource.password"));
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new SqlException("exception when get connection with db", e);
         }
     }
 
