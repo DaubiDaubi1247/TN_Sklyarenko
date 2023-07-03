@@ -1,10 +1,12 @@
 package ru.alex.thQuest.config;
 
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.ImportResource;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-@ImportResource("classpath:applicationContext.xml")
+@ComponentScan("ru.alex.thQuest.bean")
+@PropertySource("classpath:application.properties")
 public class AppConfiguration {
 
 }
