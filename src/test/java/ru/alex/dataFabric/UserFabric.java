@@ -1,6 +1,6 @@
 package ru.alex.dataFabric;
 
-import ru.alex.thQuest.dto.UserDto;
+import ru.alex.thQuest.bean.UserBean;
 
 public class UserFabric {
 
@@ -8,7 +8,7 @@ public class UserFabric {
     public static final String USER_NAME = "sasha";
     public static final String USER_PASSWORD = "123";
 
-    public static UserDto getUserDto() {
-       return new UserDto(USER_NAME, USER_PASSWORD);
+    public static UserBean getUserDto() {
+       return new UserBean(USER_NAME, USER_PASSWORD);
     }
 }

@@ -1,7 +1,5 @@
 package ru.alex.dataFabric;
 
-import ru.alex.thQuest.dto.BookDto;
-
 public class BookFabric {
 
     private static final String AUTHOR = "sasha";

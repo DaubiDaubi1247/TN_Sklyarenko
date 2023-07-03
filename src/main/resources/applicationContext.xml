@@ -3,9 +3,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="carService"
-          class="ru.alex.thQuest.xmlConfig.Impl.CarServiceImpl">
-
+    <bean id="userBean"
+          class="ru.alex.thQuest.bean.UserBean">
+        <property name="name" value="${userBean.name}"/>
     </bean>
 
 </beans>
