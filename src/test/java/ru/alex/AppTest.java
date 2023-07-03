@@ -10,8 +10,7 @@ import ru.alex.thQuest.annotation.service.BookService;
 import ru.alex.thQuest.javaConfig.AppConfiguration;
 import ru.alex.thQuest.javaConfig.service.UserService;
 
-
-public class AppTest {
+class AppTest {
 
     @Test
     void testCreateBean_XmlConfig() {
