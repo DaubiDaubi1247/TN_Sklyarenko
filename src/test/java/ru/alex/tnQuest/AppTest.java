@@ -2,40 +2,40 @@ package ru.alex.tnQuest;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.ImportResource;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import ru.alex.tnQuest.annotation.service.Impl.BookServiceImpl;
 import ru.alex.tnQuest.dataFabric.BookFabric;
+import ru.alex.tnQuest.dataFabric.CarFabric;
 import ru.alex.tnQuest.dataFabric.UserFabric;
 import ru.alex.tnQuest.dto.BookDto;
+import ru.alex.tnQuest.dto.CarDto;
 import ru.alex.tnQuest.dto.UserDto;
 import ru.alex.tnQuest.javaConfig.service.Impl.UserServiceImpl;
-
+import ru.alex.tnQuest.xmlConfig.Impl.CarServiceImpl;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest
-@ImportResource("classpath:applicationContext.xml")
-public class AppTest {
+class AppTest {
 
-    @Mock
-    private UserServiceImpl userServiceXml;
+    @MockBean
+    private CarServiceImpl userServiceXml;
 
-    @Mock
+    @MockBean
     private BookServiceImpl userServiceAnnotation;
 
-    @Mock
+    @MockBean
     private UserServiceImpl userServiceJavaConfig;
 
     @Test
     void testCreateBean_XmlConfig() {
 
-        UserDto userDto = UserFabric.getUserDto();
-        when(userServiceXml.createUser(any(UserDto.class))).thenReturn(new UserDto(userDto.getName(), userDto.getPassword()));
+        CarDto carDto = CarFabric.getCarDto();
+        when(userServiceXml.createCar(any(CarDto.class))).thenReturn(new CarDto(carDto.getNumber()));
 
-        Assertions.assertEquals(userDto, userServiceXml.createUser(userDto));
+        Assertions.assertEquals(carDto, userServiceXml.createCar(carDto));
     }
 
     @Test
