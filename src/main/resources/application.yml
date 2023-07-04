@@ -1,2 +1,3 @@
-user :
-  password : sasha123
+car :
+  number : 123
+  countDrivers : 5
