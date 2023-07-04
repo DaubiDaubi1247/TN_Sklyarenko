@@ -1,0 +1,4 @@
+database:
+  url: jdbc:mysql://localhost:5432/g
+  username: mysql
+  password: 12345

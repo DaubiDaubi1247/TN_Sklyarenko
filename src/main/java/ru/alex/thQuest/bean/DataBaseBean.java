@@ -10,10 +10,11 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 @Data
 @Component
-@ConfigurationProperties(prefix = "car")
-public class CarBean {
+@ConfigurationProperties(prefix = "database")
+public class DataBaseBean {
 
-    private String number;
+    private String url;
 
-    private int countDrivers;
+    private String username;
+    private String password;
 }
