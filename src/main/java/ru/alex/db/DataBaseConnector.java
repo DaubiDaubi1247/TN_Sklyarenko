@@ -17,18 +17,17 @@ public class DataBaseConnector {
     }
 
     static {
-        FileInputStream propertyFile;
         Properties property = new Properties();
 
-        try {
-            propertyFile = new FileInputStream("src/main/resources/application.properties");
+        try (var propertyFile = new FileInputStream("src/main/resources/application.properties")){
             property.load(propertyFile);
         } catch (IOException e) {
             throw new FileNotFoundException("properties file not found", e);
         }
 
         try {
-            connection = DriverManager.getConnection(property.getProperty("spring.datasource.url"), property.getProperty("spring.datasource.username"),
+            connection = DriverManager.getConnection(property.getProperty("spring.datasource.url"),
+                    property.getProperty("spring.datasource.username"),
                     property.getProperty("spring.datasource.password"));
         } catch (SQLException e) {
             throw new SqlException("exception when get connection with db", e);
