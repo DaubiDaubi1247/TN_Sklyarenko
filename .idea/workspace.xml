@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fbd5372-3a12-4c33-8ed1-906ee97f1fa1" name="Changes" comment="add mysql and posgtres yml files">
+    <list default="true" id="0fbd5372-3a12-4c33-8ed1-906ee97f1fa1" name="Changes" comment="add propertFIle in try with resources">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/alex/utils/propertyLoader/Impl/PropertyLoaderImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/alex/utils/propertyLoader/PropertyLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/alex/db/DataBaseConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alex/db/DataBaseConnector.java" afterDir="false" />
     </list>
@@ -69,6 +71,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.alex.utils.propertyLoader.Impl" />
       <recent name="ru.alex.service.Impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -160,6 +163,7 @@
       <workItem from="1686210214299" duration="5413000" />
       <workItem from="1686218018306" duration="3023000" />
       <workItem from="1688388592945" duration="807000" />
+      <workItem from="1688626733535" duration="559000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1684141293202</created>
@@ -238,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686147301972</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add propertFIle in try with resources">
+      <created>1688579629111</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1688579629111</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +280,7 @@
     <MESSAGE value="create updateAllBanks method" />
     <MESSAGE value="create updateAllBanks method and test" />
     <MESSAGE value="refactor exceptions in services" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor exceptions in services" />
+    <MESSAGE value="add propertFIle in try with resources" />
+    <option name="LAST_COMMIT_MESSAGE" value="add propertFIle in try with resources" />
   </component>
 </project>
