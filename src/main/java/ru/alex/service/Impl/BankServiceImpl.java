@@ -18,6 +18,8 @@ public class BankServiceImpl implements BankService {
     @Override
     @Transactional
     public List<Bank> updateAllBankNames(String newBankName) {
-        return bankRepository.updateAllBanks(newBankName);
+        bankRepository.updateAllBanks(newBankName);
+
+        return bankRepository.findAll();
     }
 }

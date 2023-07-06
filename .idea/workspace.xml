@@ -150,9 +150,9 @@
       <list>
         <item itemvalue="JUnit.java in tn" />
         <item itemvalue="JUnit.UserTest" />
+        <item itemvalue="JUnit.BankTest.testUpdateAllBankNames_ReturnCorrectValues (1)" />
         <item itemvalue="JUnit.BankTest.testUpdateAllBankNames_ReturnCorrectValues" />
         <item itemvalue="JUnit.BankTest" />
-        <item itemvalue="JUnit.BankTest.testUpdateAllBankNames_ReturnCorrectValues (1)" />
       </list>
     </recent_temporary>
   </component>
